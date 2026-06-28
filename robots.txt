@@ -1,4 +1,4 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: https://unse.site/sitemap.xml
+Sitemap: https://sajuorbit.com/sitemap.xml
