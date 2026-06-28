@@ -1,0 +1,437 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — UNSE 운세 Korean Fortune House</title>
+<meta name="description" content="About UNSE 운세 — free Korean fortune-telling in English, Korean and Japanese. Learn about Tojeong Bigyeol, Saju Palja, tarot and zodiac readings.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,300;0,400;0,500;1,300&family=Noto+Serif+KR:wght@400;600&family=Noto+Serif+JP:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0a0912; --ink-2:#12101e; --ink-3:#1a1730;
+  --paper:#efeae0; --paper-dim:rgba(239,234,224,.62); --paper-faint:rgba(239,234,224,.38);
+  --line:rgba(239,234,224,.12);
+  --cheong:#57d9d4; --jeok:#ff4d5e; --hwang:#f5b83d; --violet:#9d7bff;
+  --water:#5ea8ff; --wood:#4ade80;
+  --glow-gold:0 0 18px rgba(245,184,61,.35);
+  --glow-red:0 0 18px rgba(255,77,94,.35);
+  --glow-cyan:0 0 18px rgba(87,217,212,.30);
+  --glow-violet:0 0 18px rgba(157,123,255,.33);
+  --display:'Marcellus','Noto Serif KR','Noto Serif JP',serif;
+  --body:'Spectral','Noto Serif KR','Noto Serif JP',serif;
+  --kr:'Noto Serif KR','Noto Serif JP',serif;
+  --mono:'IBM Plex Mono','Noto Serif KR','Noto Serif JP',monospace;
+}
+html[lang="ja"]{--body:'Spectral','Noto Serif JP',serif;--kr:'Noto Serif JP',serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:var(--body);font-weight:300;line-height:1.75;font-size:17px;overflow-x:hidden}
+::selection{background:var(--hwang);color:var(--ink)}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+:focus-visible{outline:2px solid var(--hwang);outline-offset:3px;border-radius:2px}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--ink)}
+::-webkit-scrollbar-thumb{background:#2a2542;border-radius:5px;border:2px solid var(--ink)}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+
+body::before{content:"";position:fixed;inset:0;z-index:-3;background:
+  radial-gradient(1px 1px at 12% 18%,rgba(239,234,224,.55),transparent 50%),
+  radial-gradient(1px 1px at 78% 9%,rgba(239,234,224,.4),transparent 50%),
+  radial-gradient(1.6px 1.6px at 64% 64%,rgba(157,123,255,.55),transparent 50%),
+  radial-gradient(1px 1px at 31% 82%,rgba(87,217,212,.5),transparent 50%),
+  radial-gradient(1px 1px at 89% 47%,rgba(239,234,224,.4),transparent 50%)}
+.aurora{position:fixed;inset:-25%;z-index:-2;filter:blur(90px);opacity:.45;pointer-events:none}
+.aurora i{position:absolute;border-radius:50%}
+.aurora i:nth-child(1){width:46vw;height:46vw;left:-8%;top:-6%;background:rgba(157,123,255,.12);animation:fl1 30s ease-in-out infinite alternate}
+.aurora i:nth-child(2){width:38vw;height:38vw;right:-6%;top:18%;background:rgba(87,217,212,.08);animation:fl2 36s ease-in-out infinite alternate}
+.aurora i:nth-child(3){width:42vw;height:42vw;left:24%;bottom:-14%;background:rgba(245,184,61,.06);animation:fl3 42s ease-in-out infinite alternate}
+@keyframes fl1{to{transform:translate(10vw,8vh) scale(1.15)}}
+@keyframes fl2{to{transform:translate(-8vw,12vh) scale(.9)}}
+@keyframes fl3{to{transform:translate(6vw,-9vh) scale(1.1)}}
+.grain{position:fixed;inset:0;z-index:70;pointer-events:none;opacity:.05;
+  background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"/></filter><rect width="160" height="160" filter="url(%23n)" opacity="0.6"/></svg>')}
+.obang{position:fixed;top:0;left:0;right:0;height:2px;z-index:80;
+  background:linear-gradient(90deg,var(--water),var(--jeok),var(--hwang),var(--paper),var(--cheong));opacity:.85}
+@media(prefers-reduced-motion:reduce){.aurora i{animation:none!important}}
+
+header{position:sticky;top:0;z-index:50;background:rgba(10,9,18,.8);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.brand{display:flex;align-items:baseline;gap:.6em;flex-shrink:0}
+.brand .hanja{font-family:var(--kr);font-weight:600;color:var(--hwang);font-size:1.1rem;text-shadow:var(--glow-gold)}
+.brand .latin{font-family:var(--display);letter-spacing:.34em;font-size:1rem}
+.nav-right{display:flex;align-items:center;gap:14px}
+.langs{display:flex;border:1px solid var(--line);background:rgba(239,234,224,.02)}
+.langs button{padding:.55em .85em;font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;color:var(--paper-faint);transition:.25s}
+.langs button+button{border-left:1px solid var(--line)}
+.langs button.on{color:var(--hwang);background:rgba(245,184,61,.1);text-shadow:var(--glow-gold)}
+.langs button:hover{color:var(--paper)}
+.back-link{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--paper-faint);transition:.25s;display:flex;align-items:center;gap:.5em}
+.back-link:hover{color:var(--cheong)}
+.back-link::before{content:"←"}
+
+/* page hero */
+.page-hero{padding:80px 0 70px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.page-hero .wm{position:absolute;right:-2%;top:-10%;font-family:var(--kr);font-weight:600;font-size:min(40vw,480px);line-height:1;color:rgba(239,234,224,.025);z-index:-1;user-select:none;pointer-events:none}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--hwang);display:flex;align-items:center;gap:1em;margin-bottom:1.2em}
+.eyebrow .kr{font-family:var(--kr);letter-spacing:.4em;font-weight:600;text-shadow:var(--glow-gold)}
+.eyebrow::before{content:"✦";font-size:.8em;color:var(--hwang)}
+.eyebrow::after{content:"";height:1px;width:64px;background:linear-gradient(90deg,var(--hwang),transparent)}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(2rem,4.5vw,3.2rem);line-height:1.18;margin-bottom:.5em}
+h1 em{font-style:normal;background:linear-gradient(100deg,var(--cheong),var(--violet) 70%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 16px rgba(87,217,212,.3))}
+.hero-lede{color:var(--paper-dim);max-width:58ch;font-size:1.05rem}
+.btn{display:inline-flex;align-items:center;gap:.6em;font-family:var(--mono);font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;
+  padding:1em 1.8em;color:var(--hwang);position:relative;overflow:hidden;transition:.3s;
+  border:1px solid transparent;
+  background:linear-gradient(var(--ink),var(--ink)) padding-box,
+             linear-gradient(120deg,var(--hwang),rgba(255,77,94,.75),var(--hwang)) border-box}
+.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 42%,rgba(255,255,255,.16) 50%,transparent 58%);transform:translateX(-120%);transition:transform .65s ease}
+.btn:hover{box-shadow:var(--glow-gold);text-shadow:var(--glow-gold)}
+.btn:hover::after{transform:translateX(120%)}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:2em}
+
+/* reading cards */
+.readings-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;padding:64px 0 72px}
+@media(max-width:700px){.readings-grid{grid-template-columns:1fr}}
+.rcard{border:1px solid var(--line);padding:36px 32px;background:linear-gradient(160deg,var(--ink-2),var(--ink) 70%);position:relative;overflow:hidden;transition:.3s}
+.rcard::before,.rcard::after{content:"";position:absolute;width:20px;height:20px;transition:.35s;border-color:var(--c,var(--hwang));border-style:solid;opacity:.45}
+.rcard::before{top:10px;left:10px;border-width:1px 0 0 1px}
+.rcard::after{bottom:10px;right:10px;border-width:0 1px 1px 0}
+.rcard:hover{border-color:var(--c,var(--hwang));box-shadow:0 0 28px color-mix(in srgb,var(--c,var(--hwang)) 18%,transparent);transform:translateY(-3px)}
+.rcard:hover::before,.rcard:hover::after{opacity:1;width:28px;height:28px}
+.rcard .glyph{font-family:var(--kr);font-weight:600;font-size:2.8rem;color:var(--c,var(--hwang));line-height:1;margin-bottom:18px;text-shadow:0 0 20px color-mix(in srgb,var(--c,var(--hwang)) 50%,transparent)}
+.rcard .tag{font-family:var(--mono);font-size:.63rem;letter-spacing:.24em;text-transform:uppercase;color:var(--c,var(--hwang));margin-bottom:.6em}
+.rcard h3{font-family:var(--display);font-size:1.35rem;font-weight:400;margin-bottom:.4em}
+.rcard h3 .sub{font-family:var(--kr);color:var(--paper-faint);font-size:.82em;margin-left:.4em}
+.rcard p{color:var(--paper-dim);font-size:.94rem;line-height:1.85}
+.rcard.c-gold{--c:var(--hwang)}.rcard.c-red{--c:var(--jeok)}.rcard.c-violet{--c:var(--violet)}.rcard.c-cyan{--c:var(--cheong)}
+
+/* divider */
+.divider{display:flex;align-items:center;gap:18px;max-width:1140px;margin:0 auto;padding:0 24px}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--line))}
+.divider::after{background:linear-gradient(90deg,var(--line),transparent)}
+.divider span{font-family:var(--kr);color:rgba(245,184,61,.5);font-size:.85rem;letter-spacing:.5em;text-shadow:var(--glow-gold)}
+
+/* prose sections */
+section{padding:72px 0}
+section:first-of-type{padding-top:0}
+.sec-inner{max-width:860px}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(1.6rem,3vw,2.2rem);margin:.3em 0 .6em}
+h2 .kr{font-family:var(--kr);color:var(--hwang);font-weight:400;font-size:.78em;margin-left:.5em;text-shadow:var(--glow-gold)}
+.lede{color:var(--paper-dim);line-height:1.9;font-size:.98rem;max-width:66ch}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:36px}
+@media(max-width:700px){.two-col{grid-template-columns:1fr}}
+.two-col p{color:var(--paper-dim);font-size:.96rem;line-height:1.88}
+.two-col h4{font-family:var(--mono);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--hwang);margin-bottom:.8em;text-shadow:var(--glow-gold)}
+
+/* five elements strip */
+.fiveel{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+.fiveel span{font-family:var(--kr);font-weight:600;width:52px;height:52px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:1.3rem;transition:.3s}
+.fiveel span:hover{transform:translateY(-3px);border-color:currentColor}
+.el-wood{color:#4ade80}.el-fire{color:#ff4d5e}.el-earth{color:#f5b83d}.el-metal{color:#efeae0}.el-water{color:#5ea8ff}
+
+/* contact box */
+.contact-box{border:1px solid rgba(87,217,212,.4);outline:1px solid rgba(87,217,212,.12);outline-offset:7px;padding:40px 44px;max-width:640px;margin-top:36px;background:linear-gradient(170deg,rgba(87,217,212,.05),transparent);box-shadow:var(--glow-cyan)}
+.contact-box h3{font-family:var(--display);font-weight:400;font-size:1.25rem;color:var(--cheong);margin-bottom:.6em;text-shadow:var(--glow-cyan)}
+.contact-box p{color:var(--paper-dim);font-size:.96rem;line-height:1.88}
+.contact-box a{color:var(--cheong);border-bottom:1px solid rgba(87,217,212,.35);transition:.2s}
+.contact-box a:hover{border-bottom-color:var(--cheong)}
+
+/* disclaimer block */
+.disclaimer-block{border-left:2px solid rgba(245,184,61,.55);padding:14px 0 14px 24px;margin-top:32px;max-width:62ch}
+.disclaimer-block p{color:var(--paper-dim);font-size:.92rem;line-height:1.85;font-style:italic}
+html[lang="ko"] .disclaimer-block p,html[lang="ja"] .disclaimer-block p{font-style:normal}
+
+footer{border-top:1px solid var(--line);padding:50px 0 58px;color:var(--paper-faint);font-size:.85rem;position:relative;z-index:1}
+footer::before{content:"";position:absolute;top:-1px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--hwang),transparent);opacity:.5}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
+.footer-links{display:flex;gap:2em;font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--paper-faint);flex-wrap:wrap}
+.footer-links a:hover{color:var(--cheong)}
+.footer-disc{max-width:54ch;font-size:.8rem;line-height:1.8;margin-top:12px}
+</style>
+</head>
+<body>
+<div class="obang" aria-hidden="true"></div>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="UNSE home">
+      <span class="hanja">운세</span><span class="latin">UNSE</span>
+    </a>
+    <div class="nav-right">
+      <div class="langs" role="group" aria-label="Language">
+        <button data-lang="en">EN</button>
+        <button data-lang="ko">한국어</button>
+        <button data-lang="ja">日本語</button>
+      </div>
+      <a class="back-link" href="index.html" data-i18n="back"></a>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<div class="page-hero">
+  <span class="wm" aria-hidden="true">運</span>
+  <div class="wrap">
+    <p class="eyebrow"><span class="kr" data-i18n="eyebrowKr"></span><span data-i18n="eyebrow"></span></p>
+    <h1 data-i18n="title"></h1>
+    <p class="hero-lede" data-i18n="lede"></p>
+    <div class="cta-row">
+      <a class="btn" href="index.html#room" data-i18n="cta"></a>
+    </div>
+  </div>
+</div>
+
+<!-- Four Readings -->
+<div style="padding:72px 0 0">
+  <div class="wrap">
+    <p class="eyebrow"><span class="kr" data-i18n="readEyebrowKr"></span><span data-i18n="readEyebrow"></span></p>
+    <h2 data-i18n="readTitle"></h2>
+    <p class="lede" data-i18n="readLede"></p>
+  </div>
+  <div class="wrap">
+    <div class="readings-grid" id="readings-grid"></div>
+  </div>
+</div>
+
+<div class="divider" aria-hidden="true"><span>✦ 福 ✦</span></div>
+
+<!-- Cultural Background -->
+<section>
+  <div class="wrap">
+    <div class="sec-inner">
+      <p class="eyebrow"><span class="kr" data-i18n="cultEyebrowKr"></span><span data-i18n="cultEyebrow"></span></p>
+      <h2 data-i18n="cultTitle"></h2>
+      <div class="two-col" id="cult-cols"></div>
+      <div class="fiveel" aria-label="The five elements">
+        <span class="el-wood">木</span><span class="el-fire">火</span><span class="el-earth">土</span><span class="el-metal">金</span><span class="el-water">水</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true"><span>✦ 命 ✦</span></div>
+
+<!-- Disclaimer + Contact -->
+<section>
+  <div class="wrap">
+    <div class="sec-inner">
+      <p class="eyebrow"><span class="kr" data-i18n="discEyebrowKr"></span><span data-i18n="discEyebrow"></span></p>
+      <h2 data-i18n="discTitle"></h2>
+      <div class="disclaimer-block"><p data-i18n="discBody"></p></div>
+      <div class="contact-box" style="margin-top:52px">
+        <h3 data-i18n="contactTitle"></h3>
+        <p data-i18n="contactBody"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="brand" href="index.html">
+        <span class="hanja">운세</span><span class="latin">UNSE</span>
+      </a>
+      <p style="margin-top:14px;font-family:var(--mono);font-size:.66rem;letter-spacing:.18em">© 2026 UNSE · KOREAN FORTUNE HOUSE</p>
+    </div>
+    <div>
+      <div class="footer-links">
+        <a href="index.html" data-i18n="footerHome"></a>
+        <a href="about.html" data-i18n="footerAbout"></a>
+        <a href="privacy-policy.html" data-i18n="footerPrivacy"></a>
+        <a href="terms-disclaimer.html" data-i18n="footerTerms"></a>
+      </div>
+      <p class="footer-disc" data-i18n="footerDisc"></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const I18N = {
+en: {
+  back: 'Back to readings',
+  eyebrowKr: '소개',
+  eyebrow: 'About this site',
+  title: 'Five centuries of fate, <em>now in your pocket.</em>',
+  lede: 'UNSE brings together four classical divination traditions — two rooted in Korean history, two from the Western canon — into a single free, no-signup experience available in English, Korean and Japanese.',
+  cta: '✦ Start a free reading',
+
+  readEyebrowKr: '사주',
+  readEyebrow: 'The four oracles',
+  readTitle: 'What we offer',
+  readLede: 'Each tradition answers a different question. Together they cover the map.',
+  readings: [
+    { glyph:'福', tag:'Korea · Joseon dynasty · yearly oracle', title:'Tojeong Bigyeol', sub:'토정비결',
+      body:'Attributed to <strong>Yi Ji-ham</strong> (1517–1578), a Joseon scholar who chose to live in a mud hut by the sea and spend his wealth on the poor, Tojeong Bigyeol turns your lunar birth date into one of 144 hexagram verses. Each verse carries a poetic forecast for the year — covering wealth, love, health, and the rhythm of the four seasons. To this day, millions of Korean families consult it in the first days of the Lunar New Year. We quietly convert the solar birth date you enter into its lunar equivalent before casting your reading.', c:'c-gold' },
+    { glyph:'命', tag:'Korea · Four pillars · eight characters', title:'Saju Palja', sub:'사주팔자',
+      body:'"Four pillars, eight characters." The year, month, day and hour of your birth are each expressed as a heavenly stem and an earthly branch — two characters per pillar, eight in total. These eight characters map your balance of the <strong>five elements</strong> (wood, fire, earth, metal, water) and their yin-yang polarity. In Korea, a Saju reading still precedes major life decisions: weddings, career changes, baby names. The day stem is traditionally considered the <em>self</em> — who you are at your core — while the surrounding characters describe your environment, relationships and luck.', c:'c-red' },
+    { glyph:'卜', tag:'Western · Major arcana · three-card spread', title:'Tarot',  sub:'타로',
+      body:'A three-card spread drawn from the 22 major arcana: past, present, future. The major arcana describe archetypal forces and turning points — the kind of crossroads that show up in every life regardless of culture. We present each card with a short, concrete interpretation designed for reflection rather than prediction. Tap each card to reveal it; the order matters less than what catches your eye.', c:'c-violet' },
+    { glyph:'星', tag:'Western · Sun sign · daily forecast', title:'Zodiac', sub:'별자리',
+      body:'Your sun sign\'s forecast for today, refreshed every day at midnight. Each reading covers three areas — mood and general energy, love and connection, work and money — plus a lucky number, a lucky colour, and a best hour. The forecast is seeded from your sign and today\'s date, so it shifts daily. Western astrology and Korean divination share more than they differ: both map the moment of birth onto a symbolic language of cycles, elements and timing.', c:'c-cyan' }
+  ],
+  c: { 'c-gold':'c-gold','c-red':'c-red','c-violet':'c-violet','c-cyan':'c-cyan' },
+
+  cultEyebrowKr: '오행',
+  cultEyebrow: 'Five centuries of history',
+  cultTitle: 'Where these traditions come from',
+  cultCols: [
+    { h:'The Korean tradition', p:'Korean divination descends from Chinese cosmology filtered through two thousand years of Korean scholarship, folk practice and royal ritual. The five elements — wood, fire, earth, metal, water — describe not just nature but time, personality, and the relationship between any two people or moments. Saju was once read only for kings and nobles; Tojeong democratised it, writing 144 verses plain enough for any household to use. Both traditions treat fate not as a fixed sentence but as a weather report: knowable, navigable, and open to change by your own choices.' },
+    { h:'Why we built UNSE', p:'Most Korean fortune sites exist only in Korean, or exist in English as thin novelty. We wanted something that treats the tradition seriously — accurate lunar conversion, proper four-pillar calculation, readings written with real craft — while being genuinely accessible to people who don\'t read Korean. The name UNSE (운세) simply means "fortune" or "luck" in Korean. We are not professional fortune-tellers. We are people who find these traditions beautiful, historically rich, and surprisingly useful as a framework for reflection.' }
+  ],
+
+  discEyebrowKr: '면책',
+  discEyebrow: 'A word of honesty',
+  discTitle: 'Entertainment and reflection',
+  discBody: 'All readings on UNSE are offered for entertainment, reflection and cultural appreciation — not as professional advice, prediction, or a substitute for decisions made with the people and information actually in your life. Tojeong Yi Ji-ham himself insisted that fate bends to the choices you make. 운명은 정해진 것이 아니라 만들어 가는 것입니다 — "Fate is not fixed; it is something you build."',
+
+  contactTitle: 'Get in touch',
+  contactBody: 'Questions, feedback, or press enquiries are welcome at <a href="mailto:contact@unse.site">contact@unse.site</a>. We read every message.',
+
+  footerHome: 'Home',
+  footerAbout: 'About',
+  footerPrivacy: 'Privacy Policy',
+  footerTerms: 'Terms & Disclaimer',
+  footerDisc: 'All readings are for reflection and entertainment only. 운명은 정해진 것이 아니라 만들어 가는 것입니다.'
+},
+
+ko: {
+  back: '운세 보러 가기',
+  eyebrowKr: '소개',
+  eyebrow: '사이트 소개',
+  title: '오백 년 운세의 지혜를 <em>손안에서.</em>',
+  lede: 'UNSE는 한국 고유의 토정비결·사주팔자와 서양의 타로·별자리, 네 가지 전통 점술을 하나의 무료 서비스로 제공합니다. 한국어·영어·일본어로 이용할 수 있습니다.',
+  cta: '✦ 무료 운세 보기',
+
+  readEyebrowKr: '사주',
+  readEyebrow: '네 가지 점술',
+  readTitle: '이런 서비스를 제공합니다',
+  readLede: '각각의 전통은 서로 다른 질문에 답합니다. 함께 보면 사각지대가 거의 없습니다.',
+  readings: [
+    { glyph:'福', tag:'한국 · 조선시대 · 신년 운세', title:'토정비결', sub:'土亭秘訣',
+      body:'조선의 학자 <strong>이지함</strong>(1517–1578)이 지었다고 전해지는 토정비결은 음력 생년월일을 144괘 중 하나로 변환하여 한 해의 운세를 시적인 문체로 풀어냅니다. 재물·애정·건강·사계절 운세를 담고 있으며, 오늘날도 수많은 한국 가정이 음력 새해 첫날 이 책을 펼칩니다. UNSE는 입력하신 양력 생년월일을 자동으로 음력으로 변환한 뒤 괘를 뽑습니다.', c:'c-gold' },
+    { glyph:'命', tag:'한국 · 사주 · 여덟 글자', title:'사주팔자', sub:'四柱八字',
+      body:'"네 기둥, 여덟 글자." 태어난 해·월·일·시 각각에 천간과 지지를 대입해 총 여덟 글자를 구성하고, 그 속에서 <strong>오행</strong>(목·화·토·금·수)의 균형과 음양의 흐름을 읽습니다. 한국에서는 지금도 결혼·이직·작명 같은 중요한 결정 전에 사주를 봅니다. 일간(日干)이 "나 자신"을 나타내며, 나머지 일곱 글자가 환경·인간관계·운의 흐름을 담고 있습니다.', c:'c-red' },
+    { glyph:'卜', tag:'서양 · 메이저 아르카나 · 3장 스프레드', title:'타로', sub:'卜',
+      body:'메이저 아르카나 22장 중 세 장을 뽑아 과거·현재·미래를 읽는 스프레드입니다. 메이저 아르카나는 문화를 초월해 인간의 삶에 반복적으로 나타나는 전형적인 힘과 전환점을 상징합니다. 각 카드를 클릭하면 뒤집어 볼 수 있으며, 예측보다는 성찰을 위한 짧고 구체적인 해석이 함께 제공됩니다.', c:'c-violet' },
+    { glyph:'星', tag:'서양 · 태양궁 · 오늘의 운세', title:'별자리 운세', sub:'星',
+      body:'오늘의 태양궁 운세를 매일 자정마다 새롭게 제공합니다. 기분과 전반적인 흐름, 사랑과 인간관계, 일과 금전 세 가지 영역을 다루며 행운의 숫자·색·시간도 함께 알려드립니다. 서양 점성술과 한국 사주는 생시(生時)를 상징의 언어로 변환한다는 점에서 생각보다 많은 부분을 공유하고 있습니다.', c:'c-cyan' }
+  ],
+
+  cultEyebrowKr: '오행',
+  cultEyebrow: '오백 년의 역사',
+  cultTitle: '이 전통들의 뿌리',
+  cultCols: [
+    { h:'한국 점술의 계보', p:'한국의 점술은 중국의 음양오행 사상이 수천 년에 걸쳐 한국의 학문·민간 문화·궁중 의례와 융합되며 발전했습니다. 오행은 자연현상뿐 아니라 시간, 성격, 두 사람 혹은 두 순간의 관계를 설명하는 언어입니다. 사주는 본래 왕과 귀족만을 위한 것이었으나, 토정이 144괘를 일반 백성도 읽을 수 있는 쉬운 문체로 쓰면서 민간으로 퍼졌습니다. 두 전통 모두 운명을 확정된 판결이 아니라 날씨 예보처럼 — 알 수 있고, 대비할 수 있으며, 자신의 선택으로 바꿀 수 있는 것으로 — 봅니다.' },
+    { h:'UNSE를 만든 이유', p:'대부분의 한국 운세 사이트는 한국어로만 되어 있거나, 영어로 만들어졌다면 깊이가 부족한 경우가 많습니다. 저희는 음력 변환의 정확성, 올바른 사주 계산, 정성을 담은 운세 문장을 갖추면서도 한국어를 모르는 이용자도 쉽게 접할 수 있는 서비스를 만들고 싶었습니다. UNSE(운세)는 한국어로 "운" 또는 "행운"을 의미합니다. 저희는 전문 점술사가 아닙니다. 이 전통들이 아름답고, 역사적으로 풍부하며, 자기 성찰의 도구로 놀랍도록 유용하다고 생각하는 사람들입니다.' }
+  ],
+
+  discEyebrowKr: '면책',
+  discEyebrow: '솔직히 말씀드립니다',
+  discTitle: '오락 및 성찰을 위한 서비스',
+  discBody: 'UNSE의 모든 운세는 오락·성찰·문화적 체험을 위해 제공되며, 전문적인 상담·예언 또는 삶의 중요한 결정을 대신하는 근거로 사용되어서는 안 됩니다. 토정 이지함 선생도 "운명은 정해진 것이 아니라 만들어 가는 것"이라 했습니다.',
+
+  contactTitle: '문의',
+  contactBody: '질문, 피드백, 언론 문의는 <a href="mailto:contact@unse.site">contact@unse.site</a>로 보내주세요. 모든 메시지를 직접 읽습니다.',
+
+  footerHome: '홈',
+  footerAbout: '소개',
+  footerPrivacy: '개인정보 처리방침',
+  footerTerms: '이용약관·면책',
+  footerDisc: '모든 운세는 오락 및 참고 목적으로만 제공됩니다. 운명은 정해진 것이 아니라 만들어 가는 것입니다.'
+},
+
+ja: {
+  back: '占いに戻る',
+  eyebrowKr: '소개',
+  eyebrow: 'サイトについて',
+  title: '五世紀の知恵を、<em>いつでもそばに。</em>',
+  lede: 'UNSEは、韓国の土亭秘訣・四柱八字と西洋のタロット・星座占いという4つの占い伝統を、無料・会員登録不要で提供します。韓国語・英語・日本語に対応しています。',
+  cta: '✦ 無料で占いを始める',
+
+  readEyebrowKr: '사주',
+  readEyebrow: '四つの占術',
+  readTitle: '提供している占術',
+  readLede: 'それぞれの伝統が異なる問いに答えます。合わせることで、見えてくるものが増えます。',
+  readings: [
+    { glyph:'福', tag:'韓国 · 朝鮮時代 · 年間占い', title:'土亭秘訣', sub:'토정비결',
+      body:'朝鮮の学者 <strong>李之菡</strong>(1517–1578)に帰せられる土亭秘訣は、旧暦の誕生日を144卦のひとつに変換し、詩的な文体で一年の運勢を読み解きます。財運・愛情・健康・四季の流れを含み、今日も多くの韓国の家庭が旧正月に参照します。UNSEは入力された西暦の誕生日を自動的に旧暦に変換してから卦を立てます。', c:'c-gold' },
+    { glyph:'命', tag:'韓国 · 四柱 · 八字', title:'四柱八字', sub:'사주팔자',
+      body:'「四本の柱、八つの文字。」生年・月・日・時それぞれに天干と地支を当てて計8文字を構成し、<strong>五行</strong>(木・火・土・金・水)のバランスと陰陽の流れを読みます。韓国では今も結婚・転職・命名など重要な決断の前に四柱を見る習慣があります。日干（じっかん）が「自分自身」を表し、残りの文字が環境・人間関係・運の流れを示します。', c:'c-red' },
+    { glyph:'卜', tag:'西洋 · 大アルカナ · 3枚スプレッド', title:'タロット', sub:'타로',
+      body:'大アルカナ22枚から3枚を引き、過去・現在・未来を読むスプレッドです。大アルカナは文化を超えて人生に繰り返し現れる象徴的な力と転換点を表しています。各カードをタップして表向きにでき、予測よりも内省のための短く具体的な解釈が添えられています。', c:'c-violet' },
+    { glyph:'星', tag:'西洋 · 太陽宮 · 毎日の運勢', title:'星座占い', sub:'별자리',
+      body:'あなたの太陽宮の今日の運勢を毎日深夜に更新します。気分・全体的な流れ、恋愛・人間関係、仕事・金運の3領域を取り上げ、ラッキーナンバー・ラッキーカラー・ベストタイムもお知らせします。西洋占星術と韓国の四柱は、生まれた瞬間を象徴の言語に変換するという点で多くを共有しています。', c:'c-cyan' }
+  ],
+
+  cultEyebrowKr: '오행',
+  cultEyebrow: '五世紀の歴史',
+  cultTitle: 'これらの伝統の源',
+  cultCols: [
+    { h:'韓国占術の系譜', p:'韓国の占術は、中国の陰陽五行思想が数千年かけて韓国の学問・民間文化・宮廷儀礼と融合しながら発展してきました。五行は自然現象だけでなく、時間・性格・二人の人間や二つの瞬間の関係を説明する言語です。四柱はもともと王と貴族のためのものでしたが、土亭が144卦を誰でも読める平易な文体で書いたことで民間に広まりました。どちらの伝統も、運命を確定した判決ではなく天気予報のように——知ることができ、備えることができ、自らの選択で変えることができるもの——として捉えています。' },
+    { h:'UNSEを作った理由', p:'韓国の運勢サイトのほとんどは韓国語のみで、英語で作られていても内容が薄いものが多いのが現状です。旧暦変換の精度・正確な四柱計算・丁寧に書かれた占い文章を備えながら、韓国語を読めない方にも本格的に楽しんでいただけるサービスを作りたいと思いました。UNSE（운세）は韓国語で「運勢」または「幸運」を意味します。私たちはプロの占い師ではありません。これらの伝統を美しく、歴史的に豊かで、内省のフレームワークとして驚くほど有用だと感じている人間です。' }
+  ],
+
+  discEyebrowKr: '免責',
+  discEyebrow: '正直にお伝えします',
+  discTitle: '娯楽と内省のためのサービス',
+  discBody: 'UNSEのすべての占いは、娯楽・内省・文化体験のために提供されており、専門的なアドバイス・予言、または人生の重要な判断の根拠として使用されることを意図していません。土亭李之菡自身も「運命は決まったものではなく、作っていくもの」と説いています。',
+
+  contactTitle: 'お問い合わせ',
+  contactBody: 'ご質問・フィードバック・取材のお問い合わせは <a href="mailto:contact@unse.site">contact@unse.site</a> までお気軽にどうぞ。すべてのメッセージに目を通しています。',
+
+  footerHome: 'ホーム',
+  footerAbout: '私たちについて',
+  footerPrivacy: 'プライバシーポリシー',
+  footerTerms: '利用規約・免責',
+  footerDisc: 'すべての占いは娯楽・参考目的のみです。'
+}
+};
+
+let LANG = localStorage.getItem('unse-lang') || 'en';
+
+function applyLang(lang) {
+  LANG = lang;
+  localStorage.setItem('unse-lang', lang);
+  document.documentElement.lang = lang;
+  const L = I18N[lang];
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (L[key] !== undefined) el.textContent = L[key];
+  });
+  document.querySelectorAll('.langs button').forEach(b => {
+    b.classList.toggle('on', b.dataset.lang === lang);
+  });
+
+  // h1 with em tag
+  document.querySelector('h1').innerHTML = L.title;
+
+  // Readings grid
+  document.getElementById('readings-grid').innerHTML = L.readings.map(r => `
+    <div class="rcard ${r.c}">
+      <div class="glyph">${r.glyph}</div>
+      <p class="tag">${r.tag}</p>
+      <h3>${r.title}<span class="sub">${r.sub}</span></h3>
+      <p>${r.body}</p>
+    </div>`).join('');
+
+  // Cultural columns
+  document.getElementById('cult-cols').innerHTML = L.cultCols.map(c => `
+    <div><h4>${c.h}</h4><p>${c.p}</p></div>`).join('');
+}
+
+document.querySelectorAll('.langs button').forEach(b => {
+  b.addEventListener('click', () => applyLang(b.dataset.lang));
+});
+
+applyLang(LANG);
+</script>
+</body>
+</html>

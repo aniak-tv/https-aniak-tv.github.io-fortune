@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UNSE 운세 — Korean Fortune House · Tojeong Bigyeol, Saju, Tarot & Zodiac</title>
+<meta name="description" content="Free Korean fortune telling in English, Korean and Japanese. Tojeong Bigyeol, Saju Palja (Four Pillars), tarot and zodiac — instant, no sign-up.">
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="Korean fortune telling, saju palja, tojeong bigyeol, four pillars, Korean astrology, 토정비결, 사주팔자, 운세, 사주, 무료운세">
+<meta property="og:type" content="website">
+<meta property="og:title" content="UNSE 운세 — Korean Fortune House · Tojeong Bigyeol, Saju, Tarot & Zodiac">
+<meta property="og:description" content="Free Korean fortune telling in English, Korean and Japanese. Tojeong Bigyeol, Saju Palja, tarot and zodiac — instant, no sign-up.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="UNSE 운세 — Korean Fortune House">
+<meta name="twitter:description" content="Free Korean fortune telling. Tojeong Bigyeol, Saju Palja, tarot and zodiac — instant, no sign-up.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "UNSE 운세",
+  "alternateName": "Korean Fortune House",
+  "description": "Free Korean fortune telling in English, Korean and Japanese. Tojeong Bigyeol, Saju Palja (Four Pillars), tarot and zodiac — instant, no sign-up.",
+  "inLanguage": ["en", "ko", "ja"],
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "mainEntity": {
+    "@type": "ItemList",
+    "name": "Fortune Reading Types",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Tojeong Bigyeol 토정비결", "description": "Korea's New Year yearly oracle since the 1500s." },
+      { "@type": "ListItem", "position": 2, "name": "Saju Palja 사주팔자", "description": "Four pillars of destiny — eight characters mapping your elemental blueprint." },
+      { "@type": "ListItem", "position": 3, "name": "Tarot", "description": "Three-card major arcana spread: past, present, future." },
+      { "@type": "ListItem", "position": 4, "name": "Zodiac 별자리", "description": "Daily sun sign forecast covering love, work and lucky numbers." }
+    ]
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,300;0,400;0,500;1,300&family=Noto+Serif+KR:wght@400;600&family=Noto+Serif+JP:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="obang" aria-hidden="true"></div>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="UNSE home"><span class="hanja">운세</span><span class="latin">UNSE</span></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#readings" data-i18n="nav.readings">Readings</a>
+      <a href="#room" data-i18n="nav.room">Reading Room</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+    </nav>
+    <div class="nav-right">
+      <div class="langs" role="group" aria-label="Language">
+        <button data-lang="en">EN</button>
+        <button data-lang="ko">한국어</button>
+        <button data-lang="ja">日本語</button>
+      </div>
+      <a class="btn ghost hdr-cta" href="#room" style="padding:.7em 1.2em" data-i18n="nav.cta">Free reading</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <span class="wm" aria-hidden="true">運</span>
+  <div class="wrap">
+    <div class="reveal in">
+      <p class="eyebrow"><span class="kr" data-i18n="hero.eyebrowKr">점집</span><span data-i18n="hero.eyebrow">Korean divination house</span></p>
+      <h1 data-i18n="hero.title">Your fate was inked in <em>five elements</em>. We read it back.</h1>
+      <p class="lede" data-i18n="hero.lede">Read your year with <strong>Tojeong Bigyeol</strong>, map your destiny in the four pillars of <strong>Saju Palja</strong> — then cross-check the cards and the stars. The way it's been done in Korea for five centuries, now in your pocket.</p>
+      <div class="cta-row">
+        <a class="btn" href="#room" data-i18n="hero.cta1">✦ Reveal my fortune</a>
+        <a class="btn ghost" href="#about" data-i18n="hero.cta2">What is Saju?</a>
+      </div>
+      <p class="free-note" data-i18n="hero.free"><b>100% free</b> · no sign-up · instant readings</p>
+      <div class="stats" id="stats"></div>
+    </div>
+    <div class="orb" aria-hidden="true">
+      <svg viewBox="0 0 300 300">
+        <circle cx="150" cy="150" r="142" fill="none" stroke="rgba(239,234,224,.14)" stroke-width="1" stroke-dasharray="2 7"/>
+        <circle cx="150" cy="150" r="104" fill="none" stroke="rgba(245,184,61,.25)" stroke-width="1"/>
+        <g class="ring">
+          <text x="150" y="32">☰</text><text x="150" y="32" transform="rotate(45 150 150)">☱</text>
+          <text x="150" y="32" transform="rotate(90 150 150)">☲</text><text x="150" y="32" transform="rotate(135 150 150)">☳</text>
+          <text x="150" y="32" transform="rotate(180 150 150)">☴</text><text x="150" y="32" transform="rotate(225 150 150)">☵</text>
+          <text x="150" y="32" transform="rotate(270 150 150)">☶</text><text x="150" y="32" transform="rotate(315 150 150)">☷</text>
+        </g>
+        <g class="taegeuk">
+          <path d="M150,150 A40,40 0 0 0 150,70 A80,80 0 0 0 80.72,190 A40,40 0 0 1 150,150 Z" fill="#ff4d5e" opacity=".92"/>
+          <path d="M150,150 A40,40 0 0 0 150,70 A80,80 0 0 0 80.72,190 A40,40 0 0 1 150,150 Z" fill="#5ea8ff" opacity=".92" transform="rotate(120 150 150)"/>
+          <path d="M150,150 A40,40 0 0 0 150,70 A80,80 0 0 0 80.72,190 A40,40 0 0 1 150,150 Z" fill="#f5b83d" opacity=".92" transform="rotate(240 150 150)"/>
+          <circle cx="150" cy="150" r="80" fill="none" stroke="rgba(239,234,224,.3)" stroke-width="1"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TICKER ===== -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="ticker"></div>
+</div>
+
+<!-- AdSense slot: replace with <ins class="adsbygoogle"> responsive unit -->
+<div class="adslot"><div class="inner" data-i18n="ad"></div></div>
+
+<!-- ===== FOUR READINGS ===== -->
+<section id="readings">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow"><span class="kr" data-i18n="sec.eyebrowKr">사주</span><span data-i18n="sec.eyebrow">Four ways to read a fate</span></p>
+      <h2 data-i18n="sec.title">Choose your oracle</h2>
+      <p class="lede" data-i18n="sec.lede">East reads the year and the birth; West reads the cards and the sky. Together, they leave very few blind spots.</p>
+    </div>
+    <div class="cards">
+      <a class="card c-gold reveal" href="#room" data-open="tojeong">
+        <span class="shine"></span><span class="glyph">福</span>
+        <p class="tag" data-i18n="cards.tj.tag">Joseon dynasty · yearly oracle</p>
+        <h3><span data-i18n="cards.tj.title">Tojeong Bigyeol</span><span class="kr" data-i18n="cards.tj.sub">토정비결</span></h3>
+        <p class="desc" data-i18n="cards.tj.desc">Korea's New Year ritual since the 1500s. Your birth date becomes a hexagram; the hexagram becomes a verse about your year ahead.</p>
+        <span class="go" data-i18n="cards.tj.go">Read my year →</span>
+      </a>
+      <a class="card c-red reveal" href="#room" data-open="saju">
+        <span class="shine"></span><span class="glyph">命</span>
+        <p class="tag" data-i18n="cards.saju.tag">Four pillars · eight characters</p>
+        <h3><span data-i18n="cards.saju.title">Saju Palja</span><span class="kr" data-i18n="cards.saju.sub">사주팔자</span></h3>
+        <p class="desc" data-i18n="cards.saju.desc">The moment you were born, mapped into four pillars of stems and branches — your elemental blueprint.</p>
+        <span class="go" data-i18n="cards.saju.go">Map my pillars →</span>
+      </a>
+      <a class="card c-violet reveal" href="#room" data-open="tarot">
+        <span class="shine"></span><span class="glyph">卜</span>
+        <p class="tag" data-i18n="cards.tarot.tag">Major arcana · three-card spread</p>
+        <h3><span data-i18n="cards.tarot.title">Tarot</span><span class="kr" data-i18n="cards.tarot.sub">타로</span></h3>
+        <p class="desc" data-i18n="cards.tarot.desc">Past, present, future. Draw three cards and let the arcana name what you already suspect.</p>
+        <span class="go" data-i18n="cards.tarot.go">Draw the cards →</span>
+      </a>
+      <a class="card c-cyan reveal" href="#room" data-open="zodiac">
+        <span class="shine"></span><span class="glyph">星</span>
+        <p class="tag" data-i18n="cards.zodiac.tag">Western astrology · daily</p>
+        <h3><span data-i18n="cards.zodiac.title">Zodiac</span><span class="kr" data-i18n="cards.zodiac.sub">별자리</span></h3>
+        <p class="desc" data-i18n="cards.zodiac.desc">Your sun sign's forecast for today — love, work, and a lucky number to carry around.</p>
+        <span class="go" data-i18n="cards.zodiac.go">Check today →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true"><span>✦ 卜 ✦</span></div>
+
+<!-- ===== READING ROOM ===== -->
+<section class="room" id="room">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow"><span class="kr" data-i18n="room.eyebrowKr">복채 없음</span><span data-i18n="room.eyebrow">The reading room — no fee, ever</span></p>
+      <h2 data-i18n="room.title">Sit down. The candle is lit.</h2>
+    </div>
+
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-t="tojeong" role="tab"><span class="kr">秘</span><span data-i18n="tabs.tj">Tojeong Bigyeol</span></button>
+      <button class="tab" data-t="saju" role="tab"><span class="kr">命</span><span data-i18n="tabs.saju">Saju Palja</span></button>
+      <button class="tab" data-t="tarot" role="tab"><span class="kr">卜</span><span data-i18n="tabs.tarot">Tarot</span></button>
+      <button class="tab" data-t="zodiac" role="tab"><span class="kr">星</span><span data-i18n="tabs.zodiac">Zodiac</span></button>
+    </div>
+
+    <!-- TOJEONG -->
+    <div class="panel show" id="p-tojeong">
+      <p class="lede" data-i18n="tj.lede">Enter your birth date and receive your <strong>2026 hexagram verse</strong> — with a full commentary and a season-by-season forecast, in the classical style of Tojeong Yi Ji-ham's 144 fortunes.</p>
+      <div class="formrow">
+        <div class="field"><label data-i18n="tj.dateLabel">Birth date</label><div class="date-selects"><select id="tj-year" aria-label="Year"></select><select id="tj-month" aria-label="Month"></select><select id="tj-day" aria-label="Day"></select></div></div>
+        <button class="btn" id="tj-go" data-i18n="tj.btn">✦ Cast my hexagram</button>
+      </div>
+      <div id="tj-out" class="hide">
+        <div class="lunarnote" id="tj-lunar"></div>
+        <p class="result-summary hide" id="tj-summary"></p>
+        <div class="bujeok">
+          <div class="seal">秘</div>
+          <p class="gua" id="tj-gua"></p>
+          <div class="verse" id="tj-verse"></div>
+          <div class="ornline" aria-hidden="true"><span>❖</span></div>
+          <p class="cmh" id="tj-cmh"></p>
+          <div class="cm" id="tj-cm"></div>
+          <div class="meters">
+            <div class="meter"><label data-i18n="tj.mw"></label><div class="bar"><i id="m-wealth"></i></div><b id="t-wealth"></b></div>
+            <div class="meter"><label data-i18n="tj.ml"></label><div class="bar"><i id="m-love"></i></div><b id="t-love"></b></div>
+            <div class="meter"><label data-i18n="tj.mh"></label><div class="bar"><i id="m-health"></i></div><b id="t-health"></b></div>
+          </div>
+        </div>
+        <p class="subh" id="tj-seasonh" style="text-align:center;margin-top:38px"></p>
+        <div class="seasons" id="tj-seasons"></div>
+        <p class="note" style="text-align:center" data-i18n="tj.note"></p>
+      </div>
+    </div>
+
+    <!-- SAJU -->
+    <div class="panel" id="p-saju">
+      <p class="lede" data-i18n="saju.lede">Your birth moment becomes <strong>four pillars, eight characters</strong>. The day stem is <em>you</em>; the elements around it are your weather.</p>
+      <div class="formrow">
+        <div class="field"><label data-i18n="saju.dateLabel">Birth date</label><div class="date-selects"><select id="sj-year" aria-label="Year"></select><select id="sj-month" aria-label="Month"></select><select id="sj-day" aria-label="Day"></select></div></div>
+        <div class="field"><label for="sj-hour" data-i18n="saju.hourLabel">Birth hour</label><select id="sj-hour"></select></div>
+        <button class="btn red" id="sj-go" data-i18n="saju.btn">✦ Build my pillars</button>
+      </div>
+      <div id="sj-out" class="hide">
+        <div class="lunarnote" id="sj-lunar"></div>
+        <div class="pillars" id="sj-pillars"></div>
+        <div class="elcount" id="sj-elcount"></div>
+        <p class="result-summary hide" id="sj-summary"></p>
+        <div class="saju-choice hide" id="sj-choice"></div>
+        <div class="saju-read b-vio hide" id="sj-sj"><p class="dm" id="sj-sjh"></p><p class="body" id="sj-sjtext"></p></div>
+        <div class="saju-read b-gold hide" id="sj-yr"><p class="dm" id="sj-yrh"></p><p class="body" id="sj-yrtext"></p></div>
+        <div class="saju-read b-cyan hide" id="sj-mo"><p class="dm" id="sj-moh"></p><p class="body" id="sj-motext"></p></div>
+        <div class="saju-read hide" id="sj-day-read"><p class="dm" id="sj-dayh"></p><p class="body" id="sj-daytext"></p></div>
+        <div class="saju-read hide" id="sj-master"><p class="dm" id="sj-dm"></p><p class="body" id="sj-dmtext"></p></div>
+        <div class="saju-read b-gold hide" id="sj-el"><p class="dm" id="sj-elh"></p><p class="body" id="sj-text"></p></div>
+        <div class="saju-read b-cyan hide" id="sj-yinyang"><p class="dm" id="sj-yyh"></p><p class="body" id="sj-yy"></p></div>
+        <p class="note" data-i18n="saju.note"></p>
+      </div>
+    </div>
+
+    <!-- TAROT -->
+    <div class="panel" id="p-tarot">
+      <p class="lede" data-i18n="tarot.lede">Three cards from the major arcana: <strong>past, present, future</strong>. Tap each card to turn it over.</p>
+      <div class="tarot-row" id="tarot-row"></div>
+      <p class="tarot-hint" data-i18n="tarot.hint">Tap a card to reveal it</p>
+      <div class="treading-btn-row">
+        <button class="btn vio" id="tarot-again" data-i18n="tarot.again">↺ Shuffle &amp; draw again</button>
+        <button class="btn-interpret" id="tarot-interpret" data-i18n="tarot.interpret">✦ 카드 해석</button>
+      </div>
+      <div class="treading-panel hide" id="tarot-reading-panel"></div>
+    </div>
+
+    <!-- ZODIAC -->
+    <div class="panel" id="p-zodiac">
+      <p class="lede" data-i18n="zodiac.lede">Pick your sign below, or enter your birth month &amp; day to find it automatically.</p>
+      <div class="zodiac-finder">
+        <span class="subh" data-i18n="zodiac.finderLabel">Find my sign</span>
+        <div class="date-selects" style="max-width:260px"><select id="z-month"></select><select id="z-day"></select></div>
+      </div>
+      <div class="zgrid" id="zgrid"></div>
+      <div class="zresult hide" id="zout">
+        <h3><span id="z-sym"></span><span id="z-name"></span></h3>
+        <p class="date" id="z-date"></p>
+        <p class="result-summary hide" id="z-summary"></p>
+        <p class="zh" data-i18n="zodiac.hGen"></p>
+        <p class="zt" id="z-general"></p>
+        <p class="zh" data-i18n="zodiac.hLove"></p>
+        <p class="zt" id="z-love"></p>
+        <p class="zh" data-i18n="zodiac.hWork"></p>
+        <p class="zt" id="z-work"></p>
+        <p class="zwhisper" id="z-whisper"></p>
+        <div class="zlucky">
+          <div><span data-i18n="zodiac.l1"></span><b id="z-num"></b></div>
+          <div><span data-i18n="zodiac.l2"></span><b id="z-col"></b></div>
+          <div><span data-i18n="zodiac.l3"></span><b id="z-hour"></b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true"><span>✦ 命 ✦</span></div>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow"><span class="kr" data-i18n="about.eyebrowKr">오백 년</span><span data-i18n="about.eyebrow">Five centuries of fortune</span></p>
+      <h2 data-i18n="about.title">Where these readings come from</h2>
+    </div>
+    <div class="about-grid">
+      <div class="reveal">
+        <h3><span data-i18n="about.tjh">Tojeong Bigyeol</span><span class="kr" data-i18n="about.tjsub">토정비결</span></h3>
+        <p data-i18n="about.tjp">Attributed to <strong>Tojeong Yi Ji-ham</strong>, a 16th-century Joseon scholar famous for living in a mud hut by choice, Tojeong Bigyeol turns a lunar birth date into one of 144 hexagram verses. To this day, millions of Koreans consult it in the first days of the Lunar New Year — a ritual somewhere between prophecy and poetry. Because the tradition runs on the lunar calendar, we quietly convert the solar date you enter into its lunar equivalent before casting your reading.</p>
+      </div>
+      <div class="reveal">
+        <h3><span data-i18n="about.sjh">Saju Palja</span><span class="kr" data-i18n="about.sjsub">사주팔자</span></h3>
+        <p data-i18n="about.sjp">"Four pillars, eight characters." The year, month, day and hour of your birth are each written as a heavenly stem and an earthly branch, producing eight characters that map your balance of the five elements. In Korea, a Saju reading still precedes weddings, job changes and baby names.</p>
+        <div class="fiveel" aria-label="The five elements">
+          <span class="el-wood">木</span><span class="el-fire">火</span><span class="el-earth">土</span><span class="el-metal">金</span><span class="el-water">水</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AdSense slot: replace with <ins class="adsbygoogle"> responsive unit -->
+<div class="adslot" style="margin-bottom:44px"><div class="inner" data-i18n="ad"></div></div>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#top"><span class="hanja">운세</span><span class="latin">UNSE</span></a>
+      <p style="margin-top:14px;font-family:var(--mono);font-size:.76rem;letter-spacing:.18em">© 2026 UNSE · KOREAN FORTUNE HOUSE</p>
+    </div>
+    <div>
+      <div class="footer-links">
+        <a href="about.html" data-i18n="footer.about">About</a>
+        <a href="privacy-policy.html" data-i18n="footer.privacy">Privacy Policy</a>
+        <a href="terms-disclaimer.html" data-i18n="footer.terms">Terms & Disclaimer</a>
+      </div>
+      <p class="disclaimer" data-i18n="footer.disc"></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/i18n/en.js"></script>
+<script src="js/i18n/ko.js"></script>
+<script src="js/i18n/ja.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,390 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — UNSE 운세 Korean Fortune House</title>
+<meta name="description" content="Privacy policy for UNSE 운세 — how we handle your data, cookies, and third-party advertising.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,300;0,400;0,500;1,300&family=Noto+Serif+KR:wght@400;600&family=Noto+Serif+JP:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0a0912; --ink-2:#12101e; --ink-3:#1a1730;
+  --paper:#efeae0; --paper-dim:rgba(239,234,224,.62); --paper-faint:rgba(239,234,224,.38);
+  --line:rgba(239,234,224,.12);
+  --cheong:#57d9d4; --jeok:#ff4d5e; --hwang:#f5b83d; --violet:#9d7bff;
+  --water:#5ea8ff; --wood:#4ade80;
+  --glow-gold:0 0 18px rgba(245,184,61,.35);
+  --glow-cyan:0 0 18px rgba(87,217,212,.30);
+  --display:'Marcellus','Noto Serif KR','Noto Serif JP',serif;
+  --body:'Spectral','Noto Serif KR','Noto Serif JP',serif;
+  --kr:'Noto Serif KR','Noto Serif JP',serif;
+  --mono:'IBM Plex Mono','Noto Serif KR','Noto Serif JP',monospace;
+}
+html[lang="ja"]{--body:'Spectral','Noto Serif JP',serif;--kr:'Noto Serif JP',serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:var(--body);font-weight:300;line-height:1.75;font-size:17px;overflow-x:hidden}
+::selection{background:var(--hwang);color:var(--ink)}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+:focus-visible{outline:2px solid var(--hwang);outline-offset:3px;border-radius:2px}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--ink)}
+::-webkit-scrollbar-thumb{background:#2a2542;border-radius:5px;border:2px solid var(--ink)}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+
+body::before{content:"";position:fixed;inset:0;z-index:-3;background:
+  radial-gradient(1px 1px at 12% 18%,rgba(239,234,224,.55),transparent 50%),
+  radial-gradient(1px 1px at 78% 9%,rgba(239,234,224,.4),transparent 50%),
+  radial-gradient(1.6px 1.6px at 64% 64%,rgba(157,123,255,.55),transparent 50%),
+  radial-gradient(1px 1px at 31% 82%,rgba(87,217,212,.5),transparent 50%),
+  radial-gradient(1px 1px at 89% 47%,rgba(239,234,224,.4),transparent 50%)}
+.aurora{position:fixed;inset:-25%;z-index:-2;filter:blur(90px);opacity:.45;pointer-events:none}
+.aurora i{position:absolute;border-radius:50%}
+.aurora i:nth-child(1){width:46vw;height:46vw;left:-8%;top:-6%;background:rgba(157,123,255,.12);animation:fl1 30s ease-in-out infinite alternate}
+.aurora i:nth-child(2){width:38vw;height:38vw;right:-6%;top:18%;background:rgba(87,217,212,.08);animation:fl2 36s ease-in-out infinite alternate}
+.aurora i:nth-child(3){width:42vw;height:42vw;left:24%;bottom:-14%;background:rgba(245,184,61,.06);animation:fl3 42s ease-in-out infinite alternate}
+@keyframes fl1{to{transform:translate(10vw,8vh) scale(1.15)}}
+@keyframes fl2{to{transform:translate(-8vw,12vh) scale(.9)}}
+@keyframes fl3{to{transform:translate(6vw,-9vh) scale(1.1)}}
+.grain{position:fixed;inset:0;z-index:70;pointer-events:none;opacity:.05;
+  background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"/></filter><rect width="160" height="160" filter="url(%23n)" opacity="0.6"/></svg>')}
+.obang{position:fixed;top:0;left:0;right:0;height:2px;z-index:80;
+  background:linear-gradient(90deg,var(--water),var(--jeok),var(--hwang),var(--paper),var(--cheong));opacity:.85}
+@media(prefers-reduced-motion:reduce){.aurora i{animation:none!important}}
+
+header{position:sticky;top:0;z-index:50;background:rgba(10,9,18,.8);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.brand{display:flex;align-items:baseline;gap:.6em;flex-shrink:0}
+.brand .hanja{font-family:var(--kr);font-weight:600;color:var(--hwang);font-size:1.1rem;text-shadow:var(--glow-gold)}
+.brand .latin{font-family:var(--display);letter-spacing:.34em;font-size:1rem}
+.nav-right{display:flex;align-items:center;gap:14px}
+.langs{display:flex;border:1px solid var(--line);background:rgba(239,234,224,.02)}
+.langs button{padding:.55em .85em;font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;color:var(--paper-faint);transition:.25s}
+.langs button+button{border-left:1px solid var(--line)}
+.langs button.on{color:var(--hwang);background:rgba(245,184,61,.1);text-shadow:var(--glow-gold)}
+.langs button:hover{color:var(--paper)}
+.back-link{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--paper-faint);transition:.25s;display:flex;align-items:center;gap:.5em}
+.back-link:hover{color:var(--cheong)}
+.back-link::before{content:"←"}
+
+.page-hero{padding:72px 0 56px;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--hwang);display:flex;align-items:center;gap:1em;margin-bottom:1.2em}
+.eyebrow .kr{font-family:var(--kr);letter-spacing:.4em;font-weight:600;text-shadow:var(--glow-gold)}
+.eyebrow::before{content:"✦";font-size:.8em;color:var(--hwang)}
+.eyebrow::after{content:"";height:1px;width:64px;background:linear-gradient(90deg,var(--hwang),transparent)}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(1.9rem,4vw,3rem);line-height:1.18;margin-bottom:.4em}
+.updated{font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--paper-faint);margin-top:.8em}
+
+.prose-wrap{max-width:780px;padding:64px 24px 88px;margin:0 auto}
+.prose h2{font-family:var(--display);font-weight:400;font-size:1.45rem;color:var(--paper);margin:2.8em 0 .7em;padding-bottom:.4em;border-bottom:1px solid var(--line)}
+.prose h2:first-child{margin-top:0}
+.prose p{color:var(--paper-dim);line-height:1.9;margin-bottom:1.1em;font-size:.98rem}
+.prose p:last-child{margin-bottom:0}
+.prose ul{color:var(--paper-dim);line-height:1.9;margin:.6em 0 1.1em;padding-left:1.4em;font-size:.98rem}
+.prose ul li{margin-bottom:.4em}
+.prose strong{color:var(--paper);font-weight:500}
+.prose a{color:var(--cheong);border-bottom:1px solid rgba(87,217,212,.35);transition:.2s}
+.prose a:hover{border-bottom-color:var(--cheong)}
+.prose .notice{border:1px solid rgba(245,184,61,.4);background:linear-gradient(120deg,rgba(245,184,61,.07),rgba(157,123,255,.04));padding:20px 24px;margin:1.6em 0;font-size:.93rem}
+.prose .notice strong{color:var(--hwang)}
+
+footer{border-top:1px solid var(--line);padding:50px 0 58px;color:var(--paper-faint);font-size:.85rem;position:relative;z-index:1}
+footer::before{content:"";position:absolute;top:-1px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--hwang),transparent);opacity:.5}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
+footer .disclaimer{max-width:54ch;font-size:.8rem;line-height:1.8}
+.footer-links{display:flex;gap:2em;font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--paper-faint);flex-wrap:wrap}
+.footer-links a:hover{color:var(--cheong)}
+</style>
+</head>
+<body>
+<div class="obang" aria-hidden="true"></div>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="UNSE home">
+      <span class="hanja">운세</span><span class="latin">UNSE</span>
+    </a>
+    <div class="nav-right">
+      <div class="langs" role="group" aria-label="Language">
+        <button data-lang="en">EN</button>
+        <button data-lang="ko">한국어</button>
+        <button data-lang="ja">日本語</button>
+      </div>
+      <a class="back-link" href="index.html" data-i18n="back"></a>
+    </div>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow"><span class="kr" data-i18n="eyebrowKr"></span><span data-i18n="eyebrow"></span></p>
+    <h1 data-i18n="title"></h1>
+    <p class="updated" data-i18n="updated"></p>
+  </div>
+</div>
+
+<div class="prose-wrap">
+  <div class="prose" id="prose-content"></div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="brand" href="index.html">
+        <span class="hanja">운세</span><span class="latin">UNSE</span>
+      </a>
+      <p style="margin-top:14px;font-family:var(--mono);font-size:.66rem;letter-spacing:.18em">© 2026 UNSE · KOREAN FORTUNE HOUSE</p>
+    </div>
+    <div>
+      <div class="footer-links">
+        <a href="index.html" data-i18n="footerHome"></a>
+        <a href="about.html" data-i18n="footerAbout"></a>
+        <a href="privacy-policy.html" data-i18n="footerPrivacy"></a>
+        <a href="terms-disclaimer.html" data-i18n="footerTerms"></a>
+      </div>
+      <p class="disclaimer" style="margin-top:16px" data-i18n="footerDisc"></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const I18N = {
+en: {
+  back: 'Back to readings',
+  eyebrowKr: '개인정보',
+  eyebrow: 'Privacy & data',
+  title: 'Privacy Policy',
+  updated: 'Last updated: June 2026',
+  footerHome: 'Home',
+  footerAbout: 'About',
+  footerPrivacy: 'Privacy Policy',
+  footerTerms: 'Terms & Disclaimer',
+  footerDisc: 'All readings are for reflection and entertainment only.',
+  sections: [
+    {
+      h: 'Overview',
+      body: `<p>UNSE ("we," "our," or "us") operates the website at this domain (the "Site"). This Privacy Policy explains what information we collect, how we use it, and your rights regarding that information.</p>
+      <div class="notice"><strong>Short version:</strong> We do not collect, store, or transmit the birth dates you enter. All fortune-telling calculations run entirely inside your browser. We do use cookies for advertising via Google AdSense and for loading fonts via Google Fonts.</div>`
+    },
+    {
+      h: 'Information We Collect',
+      body: `<p><strong>Birth dates and personal inputs.</strong> When you use our Tojeong Bigyeol or Saju Palja features, you enter a birth date. This data is processed entirely client-side (in your browser) using JavaScript. It is never sent to any server, never stored in any database, and never logged by us.</p>
+      <p><strong>Automatically collected data.</strong> Like most websites, our hosting provider may collect standard server log data such as your IP address, browser type, referring page, and pages visited. We do not use this data to identify you personally.</p>
+      <p><strong>Cookies.</strong> We use cookies and similar tracking technologies for the following purposes:</p>
+      <ul>
+        <li><strong>Advertising (Google AdSense):</strong> Google uses cookies to serve ads based on your prior visits to this and other websites. You may opt out of personalized advertising at <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">google.com/settings/ads</a>.</li>
+        <li><strong>Fonts (Google Fonts):</strong> Our pages load typefaces from Google Fonts. Google may collect request data (IP address, browser) when fonts are served.</li>
+      </ul>`
+    },
+    {
+      h: 'How We Use Information',
+      body: `<p>We use the information we collect to:</p>
+      <ul>
+        <li>Display relevant advertisements through Google AdSense</li>
+        <li>Understand aggregate site traffic to improve the Site</li>
+        <li>Comply with legal obligations</li>
+      </ul>
+      <p>We do not sell, rent, or share your personal information with third parties for their own marketing purposes.</p>`
+    },
+    {
+      h: 'Google AdSense & Third-Party Advertising',
+      body: `<p>We use Google AdSense to display advertisements. Google and its partners may use cookies and web beacons to serve ads based on your previous visits to this Site and other sites on the internet. This is known as interest-based or personalized advertising.</p>
+      <p>Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to our Site and/or other sites on the Internet. You may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ads Settings</a>. Alternatively, you can opt out of a third-party vendor's use of cookies by visiting <a href="https://www.networkadvertising.org/choices/" target="_blank" rel="noopener">networkadvertising.org/choices</a>.</p>
+      <p>For more information on how Google uses data when you use our site, see <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google's Privacy & Terms</a>.</p>`
+    },
+    {
+      h: 'Children\'s Privacy',
+      body: `<p>Our Site is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected information from a child under 13, please contact us so we can delete it promptly.</p>`
+    },
+    {
+      h: 'Your Rights',
+      body: `<p><strong>EEA / UK residents (GDPR).</strong> You have the right to access, correct, or request deletion of any personal data we hold about you, to object to processing, and to lodge a complaint with your local data protection authority.</p>
+      <p><strong>California residents (CCPA).</strong> You have the right to know what personal information we collect and how it is used, the right to request deletion, and the right to opt out of the sale of personal information. We do not sell personal information.</p>
+      <p>Because we do not store the birth dates you enter, there is typically no personal data for us to retrieve or delete. For requests related to automatically collected log data or advertising cookies, please use the opt-out links in the section above.</p>`
+    },
+    {
+      h: 'Data Retention',
+      body: `<p>We do not retain birth dates or reading results — they exist only for the duration of your browser session. Server log data may be retained by our hosting provider for up to 30 days for security and diagnostic purposes.</p>`
+    },
+    {
+      h: 'Changes to This Policy',
+      body: `<p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date at the top of this page. We encourage you to review this policy periodically. Your continued use of the Site after any changes constitutes your acceptance of the new policy.</p>`
+    },
+    {
+      h: 'Contact',
+      body: `<p>If you have questions about this Privacy Policy or your data, you can reach us at the contact address listed on our <a href="about.html">About page</a>.</p>`
+    }
+  ]
+},
+
+ko: {
+  back: '운세 보러 가기',
+  eyebrowKr: '개인정보',
+  eyebrow: '개인정보 처리방침',
+  title: '개인정보 처리방침',
+  updated: '최종 업데이트: 2026년 6월',
+  footerHome: '홈',
+  footerAbout: '소개',
+  footerPrivacy: '개인정보 처리방침',
+  footerTerms: '이용약관·면책',
+  footerDisc: '모든 운세는 오락 및 참고 목적으로만 제공됩니다.',
+  sections: [
+    {
+      h: '개요',
+      body: `<p>UNSE(이하 "당사")는 본 사이트를 운영합니다. 본 개인정보 처리방침은 당사가 수집하는 정보, 사용 방식, 그리고 이용자의 권리를 설명합니다.</p>
+      <div class="notice"><strong>요약:</strong> 입력하신 생년월일은 당사 서버에 저장되지 않습니다. 모든 운세 계산은 이용자의 브라우저 내에서만 처리됩니다. Google AdSense 광고 및 Google Fonts 폰트 로딩에 쿠키가 사용됩니다.</div>`
+    },
+    {
+      h: '수집하는 정보',
+      body: `<p><strong>생년월일 및 입력 정보.</strong> 토정비결·사주팔자 기능을 이용할 때 입력하시는 생년월일은 브라우저의 JavaScript로만 처리됩니다. 당사 서버로 전송되거나 저장되지 않습니다.</p>
+      <p><strong>자동 수집 정보.</strong> 호스팅 업체가 IP 주소, 브라우저 종류, 방문 페이지 등 일반적인 서버 로그 데이터를 수집할 수 있습니다. 개인 식별 목적으로 사용하지 않습니다.</p>
+      <p><strong>쿠키.</strong> 다음 목적으로 쿠키 및 유사 기술을 사용합니다:</p>
+      <ul>
+        <li><strong>광고(Google AdSense):</strong> 이전 방문 이력을 바탕으로 맞춤 광고를 제공합니다. <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">google.com/settings/ads</a>에서 맞춤 광고를 거부할 수 있습니다.</li>
+        <li><strong>폰트(Google Fonts):</strong> Google Fonts에서 서체를 불러올 때 구글이 IP 주소 등 요청 정보를 수집할 수 있습니다.</li>
+      </ul>`
+    },
+    {
+      h: '정보의 이용',
+      body: `<p>수집한 정보는 다음 목적으로 사용됩니다:</p>
+      <ul>
+        <li>Google AdSense를 통한 광고 표시</li>
+        <li>사이트 개선을 위한 집계 트래픽 분석</li>
+        <li>법적 의무 이행</li>
+      </ul>
+      <p>이용자의 개인정보를 제3자에게 판매하거나 제공하지 않습니다.</p>`
+    },
+    {
+      h: 'Google AdSense 및 제3자 광고',
+      body: `<p>Google AdSense를 통해 광고를 표시합니다. Google 및 파트너는 쿠키와 웹 비콘을 이용해 방문 이력 기반의 관심 맞춤 광고를 제공할 수 있습니다.</p>
+      <p><a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google 광고 설정</a> 또는 <a href="https://www.networkadvertising.org/choices/" target="_blank" rel="noopener">networkadvertising.org</a>에서 맞춤 광고를 거부하실 수 있습니다.</p>
+      <p>구글의 데이터 사용 방식에 대한 자세한 내용은 <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google 개인정보처리방침</a>을 참고하세요.</p>`
+    },
+    {
+      h: '아동 개인정보',
+      body: `<p>본 사이트는 만 14세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 의도적으로 수집하지 않습니다. 아동의 정보가 수집되었다고 판단되는 경우 즉시 삭제하겠습니다.</p>`
+    },
+    {
+      h: '이용자 권리',
+      body: `<p><strong>EU/UK 거주자(GDPR).</strong> 개인정보에 대한 열람·정정·삭제 요청권, 처리 반대권, 감독기관에 대한 민원 제기권이 있습니다.</p>
+      <p><strong>캘리포니아 거주자(CCPA).</strong> 수집 정보의 열람 요청권, 삭제 요청권, 개인정보 판매 거부권이 있습니다. 당사는 개인정보를 판매하지 않습니다.</p>
+      <p>입력하신 생년월일은 서버에 저장되지 않으므로 별도로 삭제할 데이터가 없습니다. 광고 쿠키 관련 요청은 위의 거부 링크를 이용해 주세요.</p>`
+    },
+    {
+      h: '데이터 보존',
+      body: `<p>생년월일 및 운세 결과는 브라우저 세션 동안에만 존재하며 저장되지 않습니다. 서버 로그는 호스팅 업체에 의해 최대 30일간 보관될 수 있습니다.</p>`
+    },
+    {
+      h: '방침 변경',
+      body: `<p>본 방침은 필요에 따라 변경될 수 있으며, 변경 시 상단의 최종 업데이트 날짜를 수정합니다. 계속 이용하심으로써 변경된 방침에 동의하는 것으로 간주됩니다.</p>`
+    },
+    {
+      h: '문의',
+      body: `<p>개인정보 처리방침에 관한 문의는 <a href="about.html">소개 페이지</a>의 연락처를 이용해 주세요.</p>`
+    }
+  ]
+},
+
+ja: {
+  back: '占いに戻る',
+  eyebrowKr: '개인정보',
+  eyebrow: 'プライバシーポリシー',
+  title: 'プライバシーポリシー',
+  updated: '最終更新: 2026年6月',
+  footerHome: 'ホーム',
+  footerAbout: '私たちについて',
+  footerPrivacy: 'プライバシーポリシー',
+  footerTerms: '利用規約・免責',
+  footerDisc: 'すべての占いは娯楽・参考目的のみです。',
+  sections: [
+    {
+      h: '概要',
+      body: `<p>UNSE（以下「当サイト」）は本ウェブサイトを運営しています。本プライバシーポリシーでは、収集する情報、その利用方法、およびお客様の権利について説明します。</p>
+      <div class="notice"><strong>要約:</strong> 入力された生年月日は当サイトのサーバーに保存されません。すべての占い計算はブラウザ内のみで処理されます。Google AdSense広告およびGoogle Fontsのフォント読み込みにCookieが使用されます。</div>`
+    },
+    {
+      h: '収集する情報',
+      body: `<p><strong>生年月日および入力情報。</strong> 土亭秘訣・四柱八字機能の利用時に入力された生年月日は、ブラウザ内のJavaScriptのみで処理されます。サーバーへの送信や保存は一切行いません。</p>
+      <p><strong>自動収集情報。</strong> ホスティング事業者がIPアドレス、ブラウザの種類、アクセスページなどの標準的なサーバーログデータを収集する場合があります。個人の特定には使用しません。</p>
+      <p><strong>Cookie。</strong> 以下の目的でCookieおよび類似技術を使用します:</p>
+      <ul>
+        <li><strong>広告（Google AdSense）:</strong> 過去の訪問履歴に基づいてパーソナライズド広告を配信します。<a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">google.com/settings/ads</a>でオプトアウトできます。</li>
+        <li><strong>フォント（Google Fonts）:</strong> Google FontsからフォントをロードするときにGoogleがIPアドレス等のリクエスト情報を収集する場合があります。</li>
+      </ul>`
+    },
+    {
+      h: '情報の利用',
+      body: `<p>収集した情報は以下の目的で使用します:</p>
+      <ul>
+        <li>Google AdSenseによる広告の表示</li>
+        <li>サイト改善のためのアクセス集計</li>
+        <li>法的義務の履行</li>
+      </ul>
+      <p>お客様の個人情報を第三者に販売・提供することはありません。</p>`
+    },
+    {
+      h: 'Google AdSenseおよび第三者広告',
+      body: `<p>Google AdSenseを通じて広告を表示しています。GoogleおよびパートナーはCookieとウェブビーコンを使用して、訪問履歴に基づく関心連動型広告を配信する場合があります。</p>
+      <p><a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google広告設定</a>または<a href="https://www.networkadvertising.org/choices/" target="_blank" rel="noopener">networkadvertising.org</a>からオプトアウトできます。</p>
+      <p>Googleのデータ利用方法については<a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Googleのプライバシーポリシー</a>をご参照ください。</p>`
+    },
+    {
+      h: '子どものプライバシー',
+      body: `<p>本サービスは13歳未満の子どもを対象としていません。13歳未満の子どもから意図せず個人情報を収集した場合は、速やかに削除します。</p>`
+    },
+    {
+      h: 'お客様の権利',
+      body: `<p><strong>EEA・UK在住者（GDPR）。</strong> 個人データへのアクセス・訂正・削除請求権、処理の反対権、監督機関への申立権があります。</p>
+      <p><strong>カリフォルニア在住者（CCPA）。</strong> 収集情報の開示請求権、削除請求権、個人情報販売の拒否権があります。当サイトは個人情報を販売しません。</p>
+      <p>入力された生年月日はサーバーに保存されないため、通常は削除すべきデータはありません。</p>`
+    },
+    {
+      h: 'データ保存期間',
+      body: `<p>生年月日と占い結果はブラウザセッション中のみ存在し、保存されません。サーバーログはホスティング事業者により最長30日間保存される場合があります。</p>`
+    },
+    {
+      h: 'ポリシーの変更',
+      body: `<p>本ポリシーは必要に応じて変更される場合があります。変更時はページ上部の「最終更新」日付を修正します。引き続きご利用いただくことで、変更後のポリシーに同意したものとみなします。</p>`
+    },
+    {
+      h: 'お問い合わせ',
+      body: `<p>本プライバシーポリシーに関するお問い合わせは<a href="about.html">Aboutページ</a>の連絡先をご利用ください。</p>`
+    }
+  ]
+}
+};
+
+let LANG = localStorage.getItem('unse-lang') || 'en';
+
+function applyLang(lang) {
+  LANG = lang;
+  localStorage.setItem('unse-lang', lang);
+  document.documentElement.lang = lang;
+  const L = I18N[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (L[key] !== undefined) el.textContent = L[key];
+  });
+  document.querySelectorAll('.langs button').forEach(b => {
+    b.classList.toggle('on', b.dataset.lang === lang);
+  });
+  const prose = document.getElementById('prose-content');
+  prose.innerHTML = L.sections.map(s =>
+    `<h2>${s.h}</h2>${s.body}`
+  ).join('');
+}
+
+document.querySelectorAll('.langs button').forEach(b => {
+  b.addEventListener('click', () => applyLang(b.dataset.lang));
+});
+
+applyLang(LANG);
+</script>
+</body>
+</html>

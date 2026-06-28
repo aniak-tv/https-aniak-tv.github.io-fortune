@@ -1,0 +1,13 @@
+# 백업 파일
+unse-korean-fortune-v3_1.html
+unse-korean-fortune-v3_1.before-split.html
+js/i18n.bundle.before-lang-split.js
+js/i18n/en.before-en-polish.js
+
+# 작업 문서 / 로컬 도구
+pJ_unse.md
+.claude/
+
+# OS 생성 파일
+Thumbs.db
+.DS_Store
