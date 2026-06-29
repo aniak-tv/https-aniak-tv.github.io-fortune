@@ -1,6 +1,9 @@
 /* ================= STATE & UTILS ================= */
-let LANG=(navigator.language||'en').slice(0,2);
-if(!['en','ko','ja'].includes(LANG))LANG='en';
+let LANG=(()=>{
+  try{const saved=localStorage.getItem('preferredLanguage');if(saved&&['en','ko','ja'].includes(saved))return saved;}catch(e){}
+  const bl=((navigator.languages&&navigator.languages[0])||navigator.language||'en').slice(0,2).toLowerCase();
+  return['ko','ja'].includes(bl)?bl:'en';
+})();
 const $=q=>document.querySelector(q), $$=q=>document.querySelectorAll(q);
 const T=()=>I18N[LANG];
 const path=(o,p)=>p.split('.').reduce((a,k)=>a&&a[k],o);
@@ -106,7 +109,7 @@ function applyLang(l){
   renderTarot();
   if(zState.sign>=0)renderZodiac();
 }
-$$('.langs button').forEach(b=>b.addEventListener('click',()=>applyLang(b.dataset.lang)));
+$$('.langs button').forEach(b=>b.addEventListener('click',()=>{try{localStorage.setItem('preferredLanguage',b.dataset.lang);}catch(e){}applyLang(b.dataset.lang);}));
 
 /* ================= TABS ================= */
 function openTab(name){
