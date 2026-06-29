@@ -1,4 +1,4 @@
-/* ================= OBANGSAEK NEON TOKENS ================= */
+﻿/* ================= OBANGSAEK NEON TOKENS ================= */
 :root{
   --ink:#0a0912; --ink-2:#12101e; --ink-3:#1a1730;
   --paper:#efeae0; --paper-dim:rgba(239,234,224,.62); --paper-faint:rgba(239,234,224,.38);
@@ -376,3 +376,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;
 footer .disclaimer{max-width:54ch;font-size:.8rem;line-height:1.8}
 .footer-links{display:flex;gap:2em;font-family:var(--mono);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--paper-faint);flex-wrap:wrap;margin-bottom:14px}
 .footer-links a:hover{color:var(--cheong);transition:.25s}
+
+.simple-page{min-height:62vh;padding:88px 0}
+.simple-page .panel{border:1px solid var(--line);background:linear-gradient(160deg,var(--ink-2),var(--ink));padding:42px 38px;max-width:760px}
+.simple-page .panel p{color:var(--paper-dim);line-height:1.9;margin:0 0 1.2em}
+.simple-page .panel .status{font-family:var(--mono);font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:var(--hwang);margin-bottom:1em}

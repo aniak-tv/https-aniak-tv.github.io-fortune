@@ -122,3 +122,11 @@ THE UNSE/
 
 현재는 언어별 파일까지 분리된 상태입니다. 다음 단계에서 더 세밀하게 나누고 싶다면 운세 종류별로도 분리할 수 있습니다.`r`n`r`n예시:`r`n`r`n```text`r`ndata/ko/tojeong.js`r`ndata/ko/saju.js`r`ndata/ko/tarot.js`r`ndata/ko/zodiac.js`r`n```
 
+
+
+## SEO / 배포 메모
+- 기본 도메인: https://sajuorbit.com/
+- OG 이미지: assets/og-image.png
+- favicon/manifest: assets/favicon-*.png, manifest.json
+- GA4 코드는 각 HTML head의 `Google Analytics 4 tracking code goes here` 주석 위치에 삽입합니다.
+- tarot/saju/tojeong/zodiac은 현재 메인 페이지 기능으로 제공됩니다. 독립 SEO 콘텐츠 페이지가 필요해질 때 별도 본문을 충분히 작성한 뒤 추가하는 것을 권장합니다.
