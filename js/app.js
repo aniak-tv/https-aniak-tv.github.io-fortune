@@ -314,6 +314,8 @@ function renderReadingPanel(){
   const panel=$('#tarot-reading-panel');
   if(!tarotState.deck){panel.classList.add('hide');return;}
   const posLabels=L.pos;
+  const labels=L.detailLabels||{};
+  const detail=(key,ci)=>L[key]&&L[key][ci]?`<div class="treading-detail"><b>${labels[key]||key}</b><p>${L[key][ci]}</p></div>`:'';
   const slots=tarotState.deck.map((ci,i)=>{
     const hasTldr=!!L.tldr;
     return `<div class="treading-slot">
@@ -321,7 +323,11 @@ function renderReadingPanel(){
       <p class="treading-name">${ROMAN[ci]} ${L.names[ci]}</p>
       ${hasTldr?`<p class="treading-tldr">${L.tldr[ci]}</p>
       <blockquote class="treading-mystical">${L.mean[ci]}</blockquote>
-      <p class="treading-action">${L.action[ci]}</p>`
+      ${detail('basic',ci)}
+      ${detail('loveRead',ci)}
+      ${detail('workMoney',ci)}
+      <p class="treading-action"><b>${labels.advice||''}</b>${L.action[ci]}</p>
+      ${detail('caution',ci)}`
       :`<p class="treading-action">${L.mean[ci]}</p>`}
     </div>`;
   }).join('');
@@ -329,11 +335,19 @@ function renderReadingPanel(){
   const sub=L.readingSub||(L.tldr?'과거, 현재, 미래의 흐름을 한눈에 정리했습니다.':'Past · Present · Future');
   const label=L.summaryLabel||(T().summaryLabel)||'Summary';
   const summary=L.tldr?`<div class="treading-summary"><b>${label}</b>${L.tldr[tarotState.deck[1]]}</div>`:'';
+  const faq=L.faq?`<div class="treading-faq"><h4>${labels.faq||'FAQ'}</h4>${L.faq.map(x=>`<details><summary>${x.q}</summary><p>${x.a}</p></details>`).join('')}</div>`:'';
+  const links=L.relatedLinks?`<div class="treading-related"><h4>${labels.links||''}</h4>${L.relatedLinks.map(x=>`<button type="button" data-open="${x.t}">${x.label}</button>`).join('')}</div>`:'';
   panel.innerHTML=`<div class="treading-hd"><h3>${title}</h3><p>${sub}</p>${summary}</div>
     <div class="treading-slots">${slots}</div>
+    ${faq}
+    ${links}
     <button class="treading-close" id="treading-close">${L.close||'Close'}</button>`;
   panel.classList.remove('hide');
   $('#treading-close').addEventListener('click',()=>panel.classList.add('hide'));
+  $$('.treading-related button').forEach(b=>b.addEventListener('click',()=>{
+    openTab(b.dataset.open);
+    document.getElementById('room').scrollIntoView({behavior:'smooth'});
+  }));
   panel.scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 $('#tarot-again').addEventListener('click',()=>{dealTarot();$('#tarot-reading-panel').classList.add('hide');});

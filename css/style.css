@@ -328,7 +328,19 @@ html[lang="ko"] .bujeok .verse,html[lang="ja"] .bujeok .verse{font-style:normal;
 .treading-name{font-size:1rem;font-weight:600;color:var(--paper);margin-bottom:.5em}
 .treading-tldr{font-size:.85rem;color:var(--hwang);margin-bottom:.8em;line-height:1.45;font-weight:500}
 .treading-mystical{font-family:var(--display);font-size:.76rem;font-style:italic;color:var(--paper-dim);border-left:2px solid rgba(157,123,255,.4);padding-left:8px;margin:0 0 .8em;line-height:1.7}
-.treading-action{font-size:.76rem;color:var(--paper-dim);line-height:1.65}
+.treading-detail{margin:14px 0 0;padding-top:12px;border-top:1px solid rgba(239,234,224,.08)}
+.treading-detail b,.treading-action b{display:block;font-family:var(--mono);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--hwang);margin-bottom:6px}
+.treading-detail p{font-size:.82rem;color:var(--paper-dim);line-height:1.72}
+.treading-action{font-size:.82rem;color:var(--paper-dim);line-height:1.72;margin-top:14px;padding-top:12px;border-top:1px solid rgba(239,234,224,.08)}
+.treading-faq,.treading-related{margin-top:30px;padding-top:24px;border-top:1px solid var(--line)}
+.treading-faq h4,.treading-related h4{font-family:var(--mono);font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:var(--hwang);margin-bottom:12px;text-align:center}
+.treading-faq details{border:1px solid rgba(239,234,224,.12);background:rgba(239,234,224,.025);padding:13px 15px;margin:8px 0}
+.treading-faq summary{cursor:pointer;color:var(--paper);font-size:.86rem;line-height:1.55}
+.treading-faq p{margin-top:9px;color:var(--paper-dim);font-size:.82rem;line-height:1.7}
+.treading-related{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+.treading-related h4{width:100%;margin-bottom:4px}
+.treading-related button{background:transparent;border:1px solid rgba(245,184,61,.35);color:var(--hwang);font-family:var(--mono);font-size:.76rem;letter-spacing:.12em;padding:9px 14px;cursor:pointer;transition:.2s}
+.treading-related button:hover{background:rgba(245,184,61,.09);border-color:var(--hwang)}
 .treading-close{display:block;margin:24px auto 0;background:transparent;border:1px solid var(--line);color:var(--paper-faint);font-family:var(--mono);font-size:.76rem;letter-spacing:.18em;padding:9px 20px;cursor:pointer;transition:.2s}
 .treading-close:hover{border-color:var(--paper-faint);color:var(--paper)}
 
