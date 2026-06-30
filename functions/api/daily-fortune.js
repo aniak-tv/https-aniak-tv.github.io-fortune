@@ -150,7 +150,7 @@ async function requestGemini(env, language, date) {
         responseMimeType: 'application/json',
         temperature: 0.7,
         topP: 0.9,
-        maxOutputTokens: 1100
+        maxOutputTokens: 2048
       }
     })
   });
