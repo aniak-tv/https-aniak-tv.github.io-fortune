@@ -1,13 +1,18 @@
-# 백업 파일
+# Backup files
 unse-korean-fortune-v3_1.html
 unse-korean-fortune-v3_1.before-split.html
 js/i18n.bundle.before-lang-split.js
 js/i18n/en.before-en-polish.js
 
-# 작업 문서 / 로컬 도구
+# Local project notes and tool state
 pJ_unse.md
 .claude/
 
-# OS 생성 파일
+# Cloudflare local secrets
+.dev.vars
+.env
+.env.local
+
+# OS generated files
 Thumbs.db
 .DS_Store

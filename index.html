@@ -69,7 +69,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,300;0,400;0,500;1,300&family=Noto+Serif+KR:wght@400;600&family=Noto+Serif+JP:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=2e0c871">
+<link rel="stylesheet" href="css/style.css?v=20260630-daily">
 </head>
 <body>
 <noscript><style>body{font-family:sans-serif;padding:2rem;text-align:center}</style><p>SajuOrbit requires JavaScript. Please enable it in your browser settings. / JavaScript를 활성화해 주세요. / JavaScriptを有効にしてください。</p></noscript>
@@ -91,7 +91,7 @@
         <button data-lang="ko">한국어</button>
         <button data-lang="ja">日本語</button>
       </div>
-      <a class="btn ghost hdr-cta" href="#room" style="padding:.7em 1.2em" data-i18n="nav.cta">Free reading</a>
+      <a class="btn ghost hdr-cta" href="#daily" style="padding:.7em 1.2em" data-i18n="nav.cta">Free reading</a>
     </div>
   </div>
 </header>
@@ -105,7 +105,7 @@
       <h1 data-i18n="hero.title">Your fate was inked in <em>five elements</em>. We read it back.</h1>
       <p class="lede" data-i18n="hero.lede">Read your year with <strong>Tojeong Bigyeol</strong>, map your destiny in the four pillars of <strong>Saju Palja</strong> — then cross-check the cards and the stars. The way it's been done in Korea for five centuries, now in your pocket.</p>
       <div class="cta-row">
-        <a class="btn" href="#room" data-i18n="hero.cta1">✦ Reveal my fortune</a>
+        <a class="btn" href="#daily" data-i18n="hero.cta1">✦ Reveal my fortune</a>
         <a class="btn ghost" href="#about" data-i18n="hero.cta2">What is Saju?</a>
       </div>
       <p class="free-note" data-i18n="hero.free"><b>100% free</b> · no sign-up · instant readings</p>
@@ -139,6 +139,51 @@
 
 <!-- AdSense slot: replace with <ins class="adsbygoogle"> responsive unit -->
 <div class="adslot"><div class="inner" data-i18n="ad"></div></div>
+
+<!-- ===== DAILY FORTUNE ===== -->
+<section class="daily-section" id="daily">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow"><span class="kr">日辰</span><span data-i18n="tabs.daily">Daily Fortune</span></p>
+      <h2 data-i18n="daily.title">Today's Fortune</h2>
+      <p class="lede" data-i18n="daily.lede">Daily Fortune gives you a practical overview of today's mood and gentle action guidance.</p>
+    </div>
+    <div class="daily-card">
+      <div class="daily-head">
+        <div>
+          <p class="subh" data-i18n="daily.kicker">Daily Guide</p>
+          <h3 data-i18n="daily.title">Today's Fortune</h3>
+        </div>
+        <button class="btn" id="daily-go" data-i18n="daily.btn">✦ Get today's guide</button>
+      </div>
+      <p class="note" id="daily-status" data-i18n="daily.statusReady">One daily guide is saved per language for today.</p>
+      <div class="daily-result hide" id="daily-out">
+        <p class="result-summary hide" id="daily-summary"></p>
+        <h3 id="daily-headline"></h3>
+        <div class="daily-grid">
+          <section><b data-i18n="daily.labels.overall">Overall flow</b><p id="daily-overall"></p></section>
+          <section><b data-i18n="daily.labels.relationship">Relationships & emotions</b><p id="daily-relationship"></p></section>
+          <section><b data-i18n="daily.labels.workMoney">Work, study & choices</b><p id="daily-workMoney"></p></section>
+          <section><b data-i18n="daily.labels.condition">Condition & rhythm</b><p id="daily-condition"></p></section>
+          <section><b data-i18n="daily.labels.caution">What to watch</b><p id="daily-caution"></p></section>
+          <section><b data-i18n="daily.labels.action">Try this today</b><p id="daily-action"></p></section>
+        </div>
+        <div class="daily-luck">
+          <div><span data-i18n="daily.labels.keyword">Keyword</span><b id="daily-keyword"></b></div>
+          <div><span data-i18n="daily.labels.moodColor">Mood color</span><b id="daily-moodColor"></b></div>
+          <div><span data-i18n="daily.labels.rhythmNumber">Rhythm number</span><b id="daily-rhythmNumber"></b></div>
+        </div>
+        <div class="daily-related">
+          <h4 data-i18n="daily.labels.deeper">If you want to look deeper</h4>
+          <button type="button" data-open="saju" data-i18n="daily.related.saju">Read your Saju pattern</button>
+          <button type="button" data-open="tojeong" data-i18n="daily.related.tojeong">Read the year's Tojeong flow</button>
+          <button type="button" data-open="zodiac" data-i18n="daily.related.zodiac">Check emotional rhythm by Zodiac</button>
+          <button type="button" data-open="tarot" data-i18n="daily.related.tarot">Ask Tarot about the present question</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ===== FOUR READINGS ===== -->
 <section id="readings">
@@ -338,10 +383,10 @@
   </div>
 </footer>
 
-<script src="js/i18n.js?v=2e0c871"></script>
-<script src="js/i18n/en.js?v=2e0c871"></script>
-<script src="js/i18n/ko.js?v=2e0c871"></script>
-<script src="js/i18n/ja.js?v=2e0c871"></script>
-<script src="js/app.js?v=2e0c871"></script>
+<script src="js/i18n.js?v=20260630-daily"></script>
+<script src="js/i18n/en.js?v=20260630-daily"></script>
+<script src="js/i18n/ko.js?v=20260630-daily"></script>
+<script src="js/i18n/ja.js?v=20260630-daily"></script>
+<script src="js/app.js?v=20260630-daily"></script>
 </body>
 </html>

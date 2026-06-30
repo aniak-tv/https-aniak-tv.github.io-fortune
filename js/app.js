@@ -30,6 +30,7 @@ const tjState={date:null};
 const sjState={v:null,hr:-1,view:'saju'};
 const tarotState={deck:null,flipped:[false,false,false]};
 const zState={sign:-1};
+const dailyState={result:null};
 
 /* ================= STATIC DATA ================= */
 const STEMS=[
@@ -104,6 +105,9 @@ function applyLang(l){
   $('#zgrid').innerHTML=T().zodiac.names.map((n,i)=>`<button class="zbtn ${i===onIdx?'on':''}" data-i="${i}" aria-label="${n} ${SIGN_RANGE[i]}"><span class="zart"><img src="${SIGN_IMG[i]}" alt="${n}" loading="lazy"><span class="zmeta"><span class="sym">${SIGN_SYM[i]}</span><span class="nm">${n}</span><span class="dt">${SIGN_RANGE[i]}</span></span></span></button>`).join('');
   bindZodiac();
   // re-render live results
+  const dailySaved=readDailyStored(l);
+  if(dailySaved)renderDaily(dailySaved);
+  else{$('#daily-out').classList.add('hide');dailyState.result=null;}
   if(tjState.date)renderTojeong();
   if(sjState.v)renderSaju();
   renderTarot();
@@ -117,7 +121,94 @@ function openTab(name){
   $$('.panel').forEach(p=>p.classList.toggle('show',p.id==='p-'+name));
 }
 $$('.tab').forEach(t=>t.addEventListener('click',()=>openTab(t.dataset.t)));
-$$('[data-open]').forEach(c=>c.addEventListener('click',()=>openTab(c.dataset.open)));
+$$('[data-open]').forEach(c=>c.addEventListener('click',()=>{
+  openTab(c.dataset.open);
+  document.getElementById('room')?.scrollIntoView({behavior:'smooth'});
+}));
+
+/* ================= DAILY FORTUNE ================= */
+const DAILY_WORKER_ENDPOINT='/api/daily-fortune';
+function localDateKey(d=new Date()){
+  const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,'0'),day=String(d.getDate()).padStart(2,'0');
+  return `${y}-${m}-${day}`;
+}
+function dailyStorageKey(lang=LANG){return `dailyFortuneResult_${lang}`;}
+function trackDailyEvent(name,params={}){
+  if(typeof window.gtag==='function')window.gtag('event',name,{feature:'daily_fortune',language:LANG,...params});
+}
+function normalizeDailyFortune(x,lang,date){
+  const f=x&&typeof x==='object'?x:{};
+  return {
+    language:f.language||lang,date:f.date||date,
+    headline:f.headline||'',overall:f.overall||'',relationship:f.relationship||'',
+    workMoney:f.workMoney||'',condition:f.condition||'',caution:f.caution||'',
+    action:f.action||'',keyword:f.keyword||'',moodColor:f.moodColor||'',
+    rhythmNumber:Number(f.rhythmNumber)||1,related:f.related||['saju','tojeong','zodiac','tarot']
+  };
+}
+function readDailyStored(lang=LANG,date=localDateKey()){
+  try{
+    const saved=JSON.parse(localStorage.getItem(dailyStorageKey(lang))||'null');
+    if(saved&&saved.date===date&&saved.language===lang&&saved.fortune)return saved.fortune;
+  }catch(e){}
+  return null;
+}
+function writeDailyStored(fortune,lang=LANG,date=localDateKey(),source='worker'){
+  try{localStorage.setItem(dailyStorageKey(lang),JSON.stringify({date,language:lang,source,fortune}));}catch(e){}
+}
+function fallbackDailyFortune(lang=LANG,date=localDateKey()){
+  const L=I18N[lang].daily,items=L.fallbacks||[];
+  const base=items[hash(`${lang}:${date}`)%items.length]||items[0];
+  return normalizeDailyFortune(base,lang,date);
+}
+async function requestDailyFortune(lang=LANG,date=localDateKey()){
+  if(location.search.includes('dailyMock=1'))throw new Error('mock mode');
+  const res=await fetch(DAILY_WORKER_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({language:lang,date,timezone:Intl.DateTimeFormat().resolvedOptions().timeZone||'Asia/Seoul'})});
+  if(!res.ok)throw new Error(`daily worker ${res.status}`);
+  return normalizeDailyFortune(await res.json(),lang,date);
+}
+function renderDaily(fortune){
+  const f=normalizeDailyFortune(fortune,LANG,localDateKey());
+  dailyState.result=f;
+  $('#daily-headline').textContent=f.headline;
+  $('#daily-overall').textContent=f.overall;
+  $('#daily-relationship').textContent=f.relationship;
+  $('#daily-workMoney').textContent=f.workMoney;
+  $('#daily-condition').textContent=f.condition;
+  $('#daily-caution').textContent=f.caution;
+  $('#daily-action').textContent=f.action;
+  $('#daily-keyword').textContent=f.keyword;
+  $('#daily-moodColor').textContent=f.moodColor;
+  $('#daily-rhythmNumber').textContent=f.rhythmNumber;
+  setSummary('daily-summary',f.headline);
+  $('#daily-out').classList.remove('hide');
+}
+async function loadDailyFortune(){
+  const lang=LANG,date=localDateKey(),L=T().daily;
+  trackDailyEvent('daily_fortune_click');
+  const cached=readDailyStored(lang,date);
+  if(cached){
+    $('#daily-status').textContent=L.statusCached;
+    renderDaily(cached);
+    trackDailyEvent('daily_fortune_view',{source:'cache'});
+    return;
+  }
+  $('#daily-status').textContent=L.statusLoading;
+  try{
+    const fortune=await requestDailyFortune(lang,date);
+    writeDailyStored(fortune,lang,date,'worker');
+    $('#daily-status').textContent=L.statusSaved;
+    renderDaily(fortune);
+    trackDailyEvent('daily_fortune_view',{source:'worker'});
+  }catch(e){
+    const fortune=fallbackDailyFortune(lang,date);
+    writeDailyStored(fortune,lang,date,'fallback');
+    $('#daily-status').textContent=L.statusFallback;
+    renderDaily(fortune);
+    trackDailyEvent('daily_fortune_view',{source:'fallback'});
+  }
+}
+$('#daily-go').addEventListener('click',loadDailyFortune);
 
 /* ================= TOJEONG ================= */
 $('#tj-go').addEventListener('click',()=>{

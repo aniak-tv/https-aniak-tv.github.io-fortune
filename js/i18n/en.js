@@ -15,7 +15,7 @@ I18N.en={
   tarot:{tag:'Major arcana · three-card spread',title:'Tarot',sub:'타로',desc:'Past, present, future. Draw three cards and let the arcana name what you already suspect.',go:'Draw the cards →'},
   zodiac:{tag:'Western astrology · daily',title:'Zodiac',sub:'별자리',desc:'Your sun sign’s forecast for today — love, work, and a lucky number to carry around.',go:'Check today →'}},
  room:{eyebrowKr:'복채 없음',eyebrow:'The reading room — no fee, ever',title:'Sit down. The candle is lit.'},
- tabs:{tj:'Tojeong Bigyeol',saju:'Saju Palja',tarot:'Tarot',zodiac:'Zodiac'},
+tabs:{daily:'Daily Fortune',tj:'Tojeong Bigyeol',saju:'Saju Palja',tarot:'Tarot',zodiac:'Zodiac'},
  lunar:{
   intro:'Your lunar birthday is ',
   outro:'. This reading was cast from that date.',
@@ -24,6 +24,15 @@ I18N.en={
   fmt:(y,m,d,leap)=>`lunar year ${y}, ${['1st','2nd','3rd','4th','5th','6th','7th','8th','9th','10th','11th','12th'][m-1]} month${leap?' (leap)':''}, day ${d}`,
   help:'Korean fortune-telling traditionally uses the lunar calendar — the older "moon calendar" whose months follow the phases of the moon, so the same lunar birthday falls on a different Western (solar) date each year. We convert your solar date for you.',
   out:'Out of range — please enter a date between 1920 and 2030.'},
+ daily:{lede:'Daily Fortune gives you a practical overview of today’s mood and gentle action guidance. For deeper life patterns, try Saju or Tojeong Fortune. For a specific question, try Tarot. For daily emotional rhythm, check your Zodiac horoscope.',
+  kicker:'Daily Guide',title:"Today's Fortune",btn:"✦ Get today's guide",
+  statusReady:'One daily guide is saved per language for today.',statusLoading:"Preparing today's daily guide...",statusCached:"Showing today's saved fortune.",statusSaved:"Today's fortune has been saved.",statusFallback:'The live reading is unavailable, so a safe daily guide is shown instead.',
+  labels:{overall:'Overall flow',relationship:'Relationships & emotions',workMoney:'Work, study & choices',condition:'Condition & rhythm',caution:'What to watch',action:'Try this today',keyword:'Mood keyword',moodColor:'Mood color',rhythmNumber:'Rhythm number',deeper:'If you want to look deeper'},
+  related:{saju:'Read your Saju pattern',tojeong:"Read the year's Tojeong flow",zodiac:'Check emotional rhythm by Zodiac',tarot:'Ask Tarot about the present question'},
+  fallbacks:[
+    {language:'en',headline:'Today favors review and adjustment over rushing into expansion.',overall:'The day works better when you organize what is already open rather than starting too many new threads. Choose one small task, finish it cleanly, and let that order set the pace.',relationship:'In relationships, read the tone before reacting to the words. A slower reply or one extra question can prevent a small misunderstanding from taking up more space than it deserves.',workMoney:'Work, study, and money benefit from checking details. Dates, amounts, files, and promises deserve one more look before you confirm anything important.',condition:'Your energy may respond better to rhythm than force. Short focus blocks with real pauses will help more than trying to push through the whole day at once.',caution:'Be careful with instant replies and emotional promises. Accuracy matters more than speed today.',action:'Before sending an important message or confirming a payment or appointment, read it once more.',keyword:'Review',moodColor:'Calm blue',rhythmNumber:7,related:['saju','tojeong','zodiac','tarot']},
+    {language:'en',headline:'Today opens through conversation, but boundaries still matter.',overall:'You do not need to solve everything alone. A useful exchange, quick check-in, or honest question can loosen something that has felt stuck. Still, measure every offer against your actual time and energy.',relationship:'Listening first will help more than advising quickly. Ask what the other person needs before trying to fix the situation.',workMoney:'Collaboration, feedback, and careful confirmation are favored. For money or work agreements, leave a written record rather than relying on memory.',condition:'Your mood may absorb the room around you. If the day feels crowded, make one quiet pocket of time for yourself.',caution:'Being helpful does not mean taking over every responsibility. Notice the difference between supporting and carrying.',action:'Start one important conversation today in a short, clear, low-pressure way.',keyword:'Dialogue',moodColor:'Warm gold',rhythmNumber:3,related:['saju','tojeong','zodiac','tarot']}
+  ]},
  tj:{lede:'Enter your birth date and receive your <strong>2026 hexagram verse</strong> — with a full commentary and a season-by-season forecast, in the classical style of Tojeong Yi Ji-ham’s 144 fortunes.',
   dateLabel:'Birth date',btn:'✦ Cast my hexagram',mw:'Wealth 재물',ml:'Love 애정',mh:'Health 건강',
   note:'Simplified reading — traditional Tojeong Bigyeol uses the Korean lunar calendar.',
