@@ -179,10 +179,13 @@ export async function onRequest(context) {
   const cached = await cache.match(cacheKey);
   if (cached) return cached;
 
+  const debug = request.headers.get('X-Saju-Debug') === '1';
+
   if (!env.GEMINI_API_KEY) {
-    return json(fallback(language, date), {
-      headers: { 'Cache-Control': 'public, max-age=300' }
-    });
+    return json(
+      { error: 'daily_fortune_unavailable', language, date, ...(debug ? { debug: { hasKey: false, model: GEMINI_MODEL } } : {}) },
+      { status: 503, headers: { 'Cache-Control': 'no-store' } }
+    );
   }
 
   try {
@@ -194,8 +197,9 @@ export async function onRequest(context) {
     await cache.put(cacheKey, response.clone());
     return response;
   } catch (error) {
-    return json(fallback(language, date), {
-      headers: { 'Cache-Control': 'public, max-age=300' }
-    });
+    return json(
+      { error: 'daily_fortune_unavailable', language, date, ...(debug ? { debug: { hasKey: true, model: GEMINI_MODEL, message: String(error && error.message ? error.message : error) } } : {}) },
+      { status: 503, headers: { 'Cache-Control': 'no-store' } }
+    );
   }
 }
